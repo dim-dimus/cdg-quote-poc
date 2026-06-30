@@ -1,0 +1,29 @@
+{
+    "name": "cdg/pricing",
+    "description": "Framework-agnostic pricing engine for Cali Dream Garage quoting.",
+    "type": "library",
+    "license": "proprietary",
+    "require": {
+        "php": "^8.3"
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "CDG\\Pricing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "CDG\\Pricing\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}
