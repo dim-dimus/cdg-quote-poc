@@ -1,0 +1,1595 @@
+[
+  {
+    "name": "Ford Transit",
+    "category": "Van",
+    "labor_low_hours": 22,
+    "labor_high_hours": 28,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Fleet staple"
+  },
+  {
+    "name": "Sprinter 144",
+    "category": "Van",
+    "labor_low_hours": 24,
+    "labor_high_hours": 30,
+    "sqft_low": 300,
+    "sqft_high": 320,
+    "notes": "High demand"
+  },
+  {
+    "name": "Sprinter 170",
+    "category": "Van",
+    "labor_low_hours": 28,
+    "labor_high_hours": 36,
+    "sqft_low": 340,
+    "sqft_high": 370,
+    "notes": "Large canvas"
+  },
+  {
+    "name": "Toyota RAV4",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Efficient retail"
+  },
+  {
+    "name": "Honda CR-V",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Efficient retail"
+  },
+  {
+    "name": "Tesla Model Y",
+    "category": "Small SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Premium customer"
+  },
+  {
+    "name": "Ford Bronco Sport",
+    "category": "Small SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Slightly more complex"
+  },
+  {
+    "name": "Toyota 4Runner",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 250,
+    "notes": "Popular"
+  },
+  {
+    "name": "Jeep Grand Cherokee",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 250,
+    "notes": "Popular"
+  },
+  {
+    "name": "Ford Explorer",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Balanced"
+  },
+  {
+    "name": "Land Rover Defender",
+    "category": "Mid SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Premium complexity"
+  },
+  {
+    "name": "Chevy Tahoe",
+    "category": "Full SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 275,
+    "notes": "Large retail"
+  },
+  {
+    "name": "Ford Expedition",
+    "category": "Full SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 270,
+    "sqft_high": 285,
+    "notes": "Large retail"
+  },
+  {
+    "name": "Toyota Sequoia",
+    "category": "Full SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Strong margin"
+  },
+  {
+    "name": "Cadillac Escalade",
+    "category": "Full SUV",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 270,
+    "sqft_high": 285,
+    "notes": "Premium complexity"
+  },
+  {
+    "name": "Toyota Tacoma",
+    "category": "Truck",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 250,
+    "notes": "Popular"
+  },
+  {
+    "name": "Ford Ranger",
+    "category": "Truck",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Straightforward"
+  },
+  {
+    "name": "Chevy Silverado",
+    "category": "Truck",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 280,
+    "notes": "Large body"
+  },
+  {
+    "name": "Ford F150",
+    "category": "Truck",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 280,
+    "notes": "Large body"
+  },
+  {
+    "name": "Ford Raptor",
+    "category": "Truck",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 270,
+    "sqft_high": 290,
+    "notes": "Premium complexity"
+  },
+  {
+    "name": "Toyota Corolla",
+    "category": "Sedan",
+    "labor_low_hours": 14,
+    "labor_high_hours": 16,
+    "sqft_low": 200,
+    "sqft_high": 210,
+    "notes": "Efficient"
+  },
+  {
+    "name": "Honda Civic",
+    "category": "Sedan",
+    "labor_low_hours": 14,
+    "labor_high_hours": 16,
+    "sqft_low": 200,
+    "sqft_high": 210,
+    "notes": "Efficient"
+  },
+  {
+    "name": "Tesla Model 3",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Premium customer"
+  },
+  {
+    "name": "BMW 3 Series",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Premium customer"
+  },
+  {
+    "name": "Toyota Camry",
+    "category": "Sedan",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Mainstream"
+  },
+  {
+    "name": "Tesla Model S",
+    "category": "Sedan",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Premium complexity"
+  },
+  {
+    "name": "Jeep Wrangler 4 Door",
+    "category": "Specialty",
+    "labor_low_hours": 20,
+    "labor_high_hours": 26,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Hinges"
+  },
+  {
+    "name": "Tesla Cybertruck",
+    "category": "Specialty",
+    "labor_low_hours": 28,
+    "labor_high_hours": 40,
+    "sqft_low": 320,
+    "sqft_high": 350,
+    "notes": "Geometry nightmare"
+  },
+  {
+    "name": "Rivian R1T",
+    "category": "Specialty",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 260,
+    "sqft_high": 270,
+    "notes": "Newer body"
+  },
+  {
+    "name": "Rivian R1S",
+    "category": "Specialty",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 260,
+    "sqft_high": 270,
+    "notes": "Newer body"
+  },
+  {
+    "name": "Box Truck 16-26 ft",
+    "category": "Commercial",
+    "labor_low_hours": 26,
+    "labor_high_hours": 38,
+    "sqft_low": 400,
+    "sqft_high": 650,
+    "notes": "Top profit category"
+  },
+  {
+    "name": "Cargo Trailer",
+    "category": "Commercial",
+    "labor_low_hours": 20,
+    "labor_high_hours": 30,
+    "sqft_low": 320,
+    "sqft_high": 500,
+    "notes": "Top profit category"
+  },
+  {
+    "name": "Service Pickup",
+    "category": "Commercial",
+    "labor_low_hours": 18,
+    "labor_high_hours": 24,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": "Contractor demand"
+  },
+  {
+    "name": "Fleet SUV",
+    "category": "Commercial",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": "Repeat business"
+  },
+  {
+    "name": "Honda Accord",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Tesla Model X",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "BMW 5 Series",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "BMW X3",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "BMW X5",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "BMW X7",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mercedes C Class",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mercedes E Class",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mercedes GLC",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mercedes GLE",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mercedes GLS",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Audi A3",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Audi A4",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Audi A6",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Audi Q3",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Audi Q5",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Audi Q7",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Lexus IS",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Lexus ES",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Lexus RX",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Lexus GX",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Lexus LX",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mazda 3",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Hyundai Elantra",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Subaru Forester",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Subaru Outback",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Kia Telluride",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Hyundai Palisade",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Ram 1500",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "GMC Sierra",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mercedes Sprinter 144",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Mercedes Sprinter 170",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Jeep Wrangler",
+    "category": "General",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": null
+  },
+  {
+    "name": "Nissan Altima",
+    "category": "Sedan",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Common sedan"
+  },
+  {
+    "name": "Hyundai Sonata",
+    "category": "Sedan",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Common sedan"
+  },
+  {
+    "name": "Kia K5",
+    "category": "Sedan",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Common sedan"
+  },
+  {
+    "name": "Mazda3 Sedan",
+    "category": "Sedan",
+    "labor_low_hours": 14,
+    "labor_high_hours": 16,
+    "sqft_low": 200,
+    "sqft_high": 210,
+    "notes": "Compact sedan"
+  },
+  {
+    "name": "Kia Forte",
+    "category": "Sedan",
+    "labor_low_hours": 14,
+    "labor_high_hours": 16,
+    "sqft_low": 200,
+    "sqft_high": 210,
+    "notes": "Compact sedan"
+  },
+  {
+    "name": "Nissan Sentra",
+    "category": "Sedan",
+    "labor_low_hours": 14,
+    "labor_high_hours": 16,
+    "sqft_low": 200,
+    "sqft_high": 210,
+    "notes": "Compact sedan"
+  },
+  {
+    "name": "VW Jetta",
+    "category": "Sedan",
+    "labor_low_hours": 14,
+    "labor_high_hours": 16,
+    "sqft_low": 200,
+    "sqft_high": 210,
+    "notes": "Compact sedan"
+  },
+  {
+    "name": "Subaru Impreza",
+    "category": "Sedan",
+    "labor_low_hours": 14,
+    "labor_high_hours": 16,
+    "sqft_low": 200,
+    "sqft_high": 210,
+    "notes": "Compact sedan"
+  },
+  {
+    "name": "BMW 2 Series Gran Coupe",
+    "category": "Sedan",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 205,
+    "sqft_high": 215,
+    "notes": "Luxury compact"
+  },
+  {
+    "name": "Mercedes CLA",
+    "category": "Sedan",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 205,
+    "sqft_high": 215,
+    "notes": "Luxury compact"
+  },
+  {
+    "name": "Mercedes C-Class",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Luxury compact"
+  },
+  {
+    "name": "Mercedes E-Class",
+    "category": "Sedan",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Luxury midsize"
+  },
+  {
+    "name": "Acura Integra",
+    "category": "Sedan",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 205,
+    "sqft_high": 215,
+    "notes": "Premium compact"
+  },
+  {
+    "name": "Acura TLX",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Premium midsize"
+  },
+  {
+    "name": "Cadillac CT4",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Premium compact"
+  },
+  {
+    "name": "Cadillac CT5",
+    "category": "Sedan",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Premium midsize"
+  },
+  {
+    "name": "Genesis G70",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Premium compact"
+  },
+  {
+    "name": "Genesis G80",
+    "category": "Sedan",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Premium midsize"
+  },
+  {
+    "name": "Porsche Panamera",
+    "category": "Sedan",
+    "labor_low_hours": 19,
+    "labor_high_hours": 22,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Exotic-adjacent"
+  },
+  {
+    "name": "BMW 4 Series Coupe",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Sport coupe"
+  },
+  {
+    "name": "Ford Mustang",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Sport coupe"
+  },
+  {
+    "name": "Chevy Camaro",
+    "category": "Sedan",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Sport coupe"
+  },
+  {
+    "name": "Dodge Charger",
+    "category": "Sedan",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Large sedan"
+  },
+  {
+    "name": "Dodge Challenger",
+    "category": "Sedan",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Large coupe"
+  },
+  {
+    "name": "Nissan Rogue",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Popular crossover"
+  },
+  {
+    "name": "Mazda CX-5",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Popular crossover"
+  },
+  {
+    "name": "Mazda CX-50",
+    "category": "Small SUV",
+    "labor_low_hours": 17,
+    "labor_high_hours": 19,
+    "sqft_low": 225,
+    "sqft_high": 235,
+    "notes": "Popular crossover"
+  },
+  {
+    "name": "Hyundai Tucson",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Popular crossover"
+  },
+  {
+    "name": "Kia Sportage",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Popular crossover"
+  },
+  {
+    "name": "Subaru Crosstrek",
+    "category": "Small SUV",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Subcompact crossover"
+  },
+  {
+    "name": "Toyota Corolla Cross",
+    "category": "Small SUV",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Subcompact crossover"
+  },
+  {
+    "name": "Honda HR-V",
+    "category": "Small SUV",
+    "labor_low_hours": 15,
+    "labor_high_hours": 17,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Subcompact crossover"
+  },
+  {
+    "name": "VW Tiguan",
+    "category": "Small SUV",
+    "labor_low_hours": 17,
+    "labor_high_hours": 19,
+    "sqft_low": 225,
+    "sqft_high": 235,
+    "notes": "Compact crossover"
+  },
+  {
+    "name": "Chevy Equinox",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Popular crossover"
+  },
+  {
+    "name": "Ford Escape",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Popular crossover"
+  },
+  {
+    "name": "Lexus NX",
+    "category": "Small SUV",
+    "labor_low_hours": 17,
+    "labor_high_hours": 19,
+    "sqft_low": 225,
+    "sqft_high": 235,
+    "notes": "Luxury crossover"
+  },
+  {
+    "name": "BMW X1",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Luxury crossover"
+  },
+  {
+    "name": "Mercedes GLA",
+    "category": "Small SUV",
+    "labor_low_hours": 16,
+    "labor_high_hours": 18,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Luxury crossover"
+  },
+  {
+    "name": "Acura RDX",
+    "category": "Small SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Premium crossover"
+  },
+  {
+    "name": "Genesis GV70",
+    "category": "Small SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 230,
+    "sqft_high": 240,
+    "notes": "Premium crossover"
+  },
+  {
+    "name": "Porsche Macan",
+    "category": "Small SUV",
+    "labor_low_hours": 19,
+    "labor_high_hours": 22,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Premium performance crossover"
+  },
+  {
+    "name": "Honda Passport",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Midsize SUV"
+  },
+  {
+    "name": "Hyundai Santa Fe",
+    "category": "Mid SUV",
+    "labor_low_hours": 17,
+    "labor_high_hours": 19,
+    "sqft_low": 225,
+    "sqft_high": 235,
+    "notes": "Midsize SUV"
+  },
+  {
+    "name": "Kia Sorento",
+    "category": "Mid SUV",
+    "labor_low_hours": 17,
+    "labor_high_hours": 19,
+    "sqft_low": 225,
+    "sqft_high": 235,
+    "notes": "Midsize SUV"
+  },
+  {
+    "name": "Chevy Blazer",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Midsize SUV"
+  },
+  {
+    "name": "Nissan Murano",
+    "category": "Mid SUV",
+    "labor_low_hours": 17,
+    "labor_high_hours": 19,
+    "sqft_low": 225,
+    "sqft_high": 235,
+    "notes": "Midsize SUV"
+  },
+  {
+    "name": "VW Atlas Cross Sport",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Midsize SUV"
+  },
+  {
+    "name": "Toyota Highlander",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "3-row crossover"
+  },
+  {
+    "name": "Honda Pilot",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "3-row crossover"
+  },
+  {
+    "name": "Ford Bronco",
+    "category": "Mid SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Boxy/off-road"
+  },
+  {
+    "name": "Land Rover Defender 110",
+    "category": "Mid SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Premium off-road"
+  },
+  {
+    "name": "BMW X6",
+    "category": "Mid SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Luxury midsize"
+  },
+  {
+    "name": "Audi Q8",
+    "category": "Mid SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Luxury midsize"
+  },
+  {
+    "name": "Acura MDX",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Premium 3-row"
+  },
+  {
+    "name": "Genesis GV80",
+    "category": "Mid SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Premium midsize"
+  },
+  {
+    "name": "Cadillac XT6",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Premium 3-row"
+  },
+  {
+    "name": "Infiniti QX60",
+    "category": "Mid SUV",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Premium 3-row"
+  },
+  {
+    "name": "Chevy Suburban",
+    "category": "Full SUV",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 295,
+    "notes": "Full-size SUV"
+  },
+  {
+    "name": "GMC Yukon",
+    "category": "Full SUV",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 275,
+    "notes": "Full-size SUV"
+  },
+  {
+    "name": "GMC Yukon XL",
+    "category": "Full SUV",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 295,
+    "notes": "Full-size SUV"
+  },
+  {
+    "name": "Ford Expedition Max",
+    "category": "Full SUV",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 285,
+    "sqft_high": 300,
+    "notes": "Full-size SUV"
+  },
+  {
+    "name": "Cadillac Escalade ESV",
+    "category": "Full SUV",
+    "labor_low_hours": 24,
+    "labor_high_hours": 28,
+    "sqft_low": 290,
+    "sqft_high": 305,
+    "notes": "Luxury full-size"
+  },
+  {
+    "name": "Lincoln Navigator",
+    "category": "Full SUV",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 270,
+    "sqft_high": 285,
+    "notes": "Luxury full-size"
+  },
+  {
+    "name": "Lincoln Navigator L",
+    "category": "Full SUV",
+    "labor_low_hours": 24,
+    "labor_high_hours": 28,
+    "sqft_low": 290,
+    "sqft_high": 305,
+    "notes": "Luxury full-size"
+  },
+  {
+    "name": "Jeep Wagoneer",
+    "category": "Full SUV",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 270,
+    "sqft_high": 285,
+    "notes": "Large SUV"
+  },
+  {
+    "name": "Jeep Grand Wagoneer",
+    "category": "Full SUV",
+    "labor_low_hours": 24,
+    "labor_high_hours": 28,
+    "sqft_low": 290,
+    "sqft_high": 305,
+    "notes": "Large luxury SUV"
+  },
+  {
+    "name": "Ford F-150",
+    "category": "Truck",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 280,
+    "notes": "High-volume truck"
+  },
+  {
+    "name": "Ford F-150 Raptor",
+    "category": "Truck",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 270,
+    "sqft_high": 290,
+    "notes": "Performance truck"
+  },
+  {
+    "name": "Ford Super Duty F-250",
+    "category": "Truck",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Heavy-duty truck"
+  },
+  {
+    "name": "Ford Super Duty F-350",
+    "category": "Truck",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 285,
+    "sqft_high": 305,
+    "notes": "Heavy-duty truck"
+  },
+  {
+    "name": "Chevy Silverado 1500",
+    "category": "Truck",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 280,
+    "notes": "High-volume truck"
+  },
+  {
+    "name": "Chevy Silverado 2500HD",
+    "category": "Truck",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Heavy-duty truck"
+  },
+  {
+    "name": "GMC Sierra 1500",
+    "category": "Truck",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 280,
+    "notes": "High-volume truck"
+  },
+  {
+    "name": "GMC Sierra 2500HD",
+    "category": "Truck",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Heavy-duty truck"
+  },
+  {
+    "name": "Ram 2500",
+    "category": "Truck",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Heavy-duty truck"
+  },
+  {
+    "name": "Toyota Tundra",
+    "category": "Truck",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 280,
+    "notes": "Full-size truck"
+  },
+  {
+    "name": "Chevy Colorado",
+    "category": "Truck",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Midsize truck"
+  },
+  {
+    "name": "GMC Canyon",
+    "category": "Truck",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Midsize truck"
+  },
+  {
+    "name": "Nissan Frontier",
+    "category": "Truck",
+    "labor_low_hours": 18,
+    "labor_high_hours": 20,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Midsize truck"
+  },
+  {
+    "name": "Jeep Gladiator",
+    "category": "Truck",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Specialty truck"
+  },
+  {
+    "name": "Ford Transit Connect",
+    "category": "Van",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": "Fleet-friendly"
+  },
+  {
+    "name": "Ford Transit Cargo",
+    "category": "Van",
+    "labor_low_hours": 22,
+    "labor_high_hours": 28,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Fleet staple"
+  },
+  {
+    "name": "Ford Transit Passenger",
+    "category": "Van",
+    "labor_low_hours": 22,
+    "labor_high_hours": 28,
+    "sqft_low": 285,
+    "sqft_high": 305,
+    "notes": "Passenger van"
+  },
+  {
+    "name": "Ram ProMaster 136",
+    "category": "Van",
+    "labor_low_hours": 22,
+    "labor_high_hours": 28,
+    "sqft_low": 290,
+    "sqft_high": 310,
+    "notes": "Commercial van"
+  },
+  {
+    "name": "Ram ProMaster 159",
+    "category": "Van",
+    "labor_low_hours": 24,
+    "labor_high_hours": 30,
+    "sqft_low": 300,
+    "sqft_high": 320,
+    "notes": "Commercial van"
+  },
+  {
+    "name": "Mercedes Metris",
+    "category": "Van",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 260,
+    "sqft_high": 280,
+    "notes": "Midsize van"
+  },
+  {
+    "name": "Nissan NV200",
+    "category": "Van",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 240,
+    "sqft_high": 260,
+    "notes": "Small work van"
+  },
+  {
+    "name": "Chevy Express",
+    "category": "Van",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Legacy work van"
+  },
+  {
+    "name": "GMC Savana",
+    "category": "Van",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 280,
+    "sqft_high": 300,
+    "notes": "Legacy work van"
+  },
+  {
+    "name": "Toyota Sienna",
+    "category": "Van",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Family van"
+  },
+  {
+    "name": "Honda Odyssey",
+    "category": "Van",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Family van"
+  },
+  {
+    "name": "Kia Carnival",
+    "category": "Van",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Family van"
+  },
+  {
+    "name": "Chrysler Pacifica",
+    "category": "Van",
+    "labor_low_hours": 18,
+    "labor_high_hours": 21,
+    "sqft_low": 245,
+    "sqft_high": 255,
+    "notes": "Family van"
+  },
+  {
+    "name": "Jeep Wrangler 2 Door",
+    "category": "Specialty",
+    "labor_low_hours": 18,
+    "labor_high_hours": 24,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Complex hinges"
+  },
+  {
+    "name": "Jeep Wrangler 392",
+    "category": "Specialty",
+    "labor_low_hours": 22,
+    "labor_high_hours": 28,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Complex premium"
+  },
+  {
+    "name": "Land Rover Defender 90",
+    "category": "Specialty",
+    "labor_low_hours": 19,
+    "labor_high_hours": 23,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Short premium SUV"
+  },
+  {
+    "name": "Porsche Cayenne",
+    "category": "Specialty",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Premium performance SUV"
+  },
+  {
+    "name": "Porsche 911",
+    "category": "Specialty",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 215,
+    "sqft_high": 225,
+    "notes": "Sports car"
+  },
+  {
+    "name": "Porsche Taycan",
+    "category": "Specialty",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 220,
+    "sqft_high": 230,
+    "notes": "Premium EV sports sedan"
+  },
+  {
+    "name": "Chevy Corvette",
+    "category": "Specialty",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 215,
+    "sqft_high": 225,
+    "notes": "Sports car"
+  },
+  {
+    "name": "Nissan GT-R",
+    "category": "Specialty",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 215,
+    "sqft_high": 225,
+    "notes": "Sports car"
+  },
+  {
+    "name": "Toyota GR Supra",
+    "category": "Specialty",
+    "labor_low_hours": 17,
+    "labor_high_hours": 21,
+    "sqft_low": 210,
+    "sqft_high": 220,
+    "notes": "Sports coupe"
+  },
+  {
+    "name": "BMW M3",
+    "category": "Specialty",
+    "labor_low_hours": 17,
+    "labor_high_hours": 20,
+    "sqft_low": 215,
+    "sqft_high": 225,
+    "notes": "Performance sedan"
+  },
+  {
+    "name": "BMW M4",
+    "category": "Specialty",
+    "labor_low_hours": 17,
+    "labor_high_hours": 20,
+    "sqft_low": 215,
+    "sqft_high": 225,
+    "notes": "Performance coupe"
+  },
+  {
+    "name": "Mercedes G-Class",
+    "category": "Specialty",
+    "labor_low_hours": 24,
+    "labor_high_hours": 28,
+    "sqft_low": 270,
+    "sqft_high": 285,
+    "notes": "High-value boxy SUV"
+  },
+  {
+    "name": "Lamborghini Urus",
+    "category": "Specialty",
+    "labor_low_hours": 24,
+    "labor_high_hours": 28,
+    "sqft_low": 270,
+    "sqft_high": 285,
+    "notes": "Exotic SUV"
+  },
+  {
+    "name": "Maserati Grecale",
+    "category": "Specialty",
+    "labor_low_hours": 18,
+    "labor_high_hours": 22,
+    "sqft_low": 235,
+    "sqft_high": 245,
+    "notes": "Premium crossover"
+  },
+  {
+    "name": "Maserati Levante",
+    "category": "Specialty",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Premium midsize SUV"
+  },
+  {
+    "name": "Range Rover Sport",
+    "category": "Specialty",
+    "labor_low_hours": 20,
+    "labor_high_hours": 24,
+    "sqft_low": 250,
+    "sqft_high": 260,
+    "notes": "Premium SUV"
+  },
+  {
+    "name": "Range Rover",
+    "category": "Specialty",
+    "labor_low_hours": 22,
+    "labor_high_hours": 26,
+    "sqft_low": 270,
+    "sqft_high": 285,
+    "notes": "Large premium SUV"
+  }
+]
