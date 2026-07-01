@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c6308b2887ad41eb39840acca2bf24d2",
+    "content-hash": "a5e8857499a7753d559bfa926df6381b",
     "packages": [
         {
             "name": "brick/math",
@@ -140,10 +140,10 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/pricing",
-                "reference": "89fe37df8fe1774a89fba4bf91c52f2aea7d5398"
+                "reference": "6fe1cb5df1c700d7e2ebcb49508cc69e5c7945de"
             },
             "require": {
-                "php": "^8.3"
+                "php": "^8.4"
             },
             "require-dev": {
                 "pestphp/pest": "^3.0"
@@ -1092,16 +1092,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v13.17.0",
+            "version": "v13.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "0802b7a81f3252d78200b8037ac183a686a529f0"
+                "reference": "138e5806ed7e4e21591948b661119d3810f052cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/0802b7a81f3252d78200b8037ac183a686a529f0",
-                "reference": "0802b7a81f3252d78200b8037ac183a686a529f0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/138e5806ed7e4e21591948b661119d3810f052cf",
+                "reference": "138e5806ed7e4e21591948b661119d3810f052cf",
                 "shasum": ""
             },
             "require": {
@@ -1312,7 +1312,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2026-06-23T19:42:45+00:00"
+            "time": "2026-06-30T12:54:13+00:00"
         },
         {
             "name": "laravel/prompts",
@@ -9347,7 +9347,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^8.3"
+        "php": "^8.4"
     },
     "platform-dev": {},
     "plugin-api-version": "2.6.0"
