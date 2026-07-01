@@ -140,10 +140,10 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/pricing",
-                "reference": "6fe1cb5df1c700d7e2ebcb49508cc69e5c7945de"
+                "reference": "8ebfefd1504f43b0ba42d8ba17d9177abb51ef61"
             },
             "require": {
-                "php": "^8.4"
+                "php": "^8.3"
             },
             "require-dev": {
                 "pestphp/pest": "^3.0"
