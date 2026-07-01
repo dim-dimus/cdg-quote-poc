@@ -1,0 +1,476 @@
+{
+  "_note": "Ground-truth fixtures extracted from CDG_workbook.xlsx. Never edit expected values to make a test pass \u2014 fix the engine instead.",
+  "config": {
+    "shopRateCents": 11000,
+    "wasteMultiplier": 1.2,
+    "materialCostCentsPerSqFt": 220,
+    "complexityMultipliers": {
+      "easy": 0.95,
+      "standard": 1.0,
+      "complex": 1.12,
+      "specialty": 1.22
+    },
+    "marginFloors": {
+      "reject": 0.55,
+      "review": 0.6,
+      "strong": 0.65
+    },
+    "addOns": {
+      "ceramic_coating": {
+        "priceCents": 70000,
+        "costCents": 10000
+      },
+      "window_tint": {
+        "priceCents": 40000,
+        "costCents": 12000
+      },
+      "prep_fee": {
+        "priceCents": 25000,
+        "costCents": 4000
+      },
+      "trim_removal": {
+        "priceCents": 30000,
+        "costCents": 7500
+      },
+      "design_basic": {
+        "priceCents": 30000,
+        "costCents": 0
+      },
+      "design_custom": {
+        "priceCents": 60000,
+        "costCents": 0
+      },
+      "design_advanced": {
+        "priceCents": 120000,
+        "costCents": 0
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "ford-transit-cc-easy-none",
+      "description": "Ford Transit \u00b7 Color Change \u00b7 Easy \u00b7 no add-ons",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 551000.0,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 826000,
+        "totalCostCents": 351560,
+        "grossProfitCents": 474440,
+        "grossMargin": 0.5743825666,
+        "decision": "REVIEW"
+      }
+    },
+    {
+      "id": "ford-transit-cc-standard-none",
+      "description": "Ford Transit \u00b7 Color Change \u00b7 Standard \u00b7 no add-ons \u2014 baseline case",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 580000.0,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 855000,
+        "totalCostCents": 351560,
+        "grossProfitCents": 503440,
+        "grossMargin": 0.5888187135,
+        "decision": "REVIEW"
+      }
+    },
+    {
+      "id": "ford-transit-cc-complex-none",
+      "description": "Ford Transit \u00b7 Color Change \u00b7 Complex \u00b7 no add-ons",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "complex",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 649600.0000000001,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 924600,
+        "totalCostCents": 351560,
+        "grossProfitCents": 573040,
+        "grossMargin": 0.6197707117,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "ford-transit-cc-specialty-none",
+      "description": "Ford Transit \u00b7 Color Change \u00b7 Specialty \u00b7 no add-ons",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "specialty",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 707600.0,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 982600,
+        "totalCostCents": 351560,
+        "grossProfitCents": 631040,
+        "grossMargin": 0.6422145329,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "ford-transit-printed-standard-none",
+      "description": "Ford Transit \u00b7 Printed \u00b7 Standard \u00b7 no add-ons",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2300.0,
+          "baseWrapRevCents": 667000.0,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 942000,
+        "totalCostCents": 351560,
+        "grossProfitCents": 590440,
+        "grossMargin": 0.6267940552,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "ford-transit-printed-specialty-none",
+      "description": "Ford Transit \u00b7 Printed \u00b7 Specialty \u00b7 no add-ons",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "specialty",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2300.0,
+          "baseWrapRevCents": 813740.0,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 1088740,
+        "totalCostCents": 351560,
+        "grossProfitCents": 737180,
+        "grossMargin": 0.6770946231,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "toyota-corolla-cc-standard-none",
+      "description": "Toyota Corolla \u00b7 Color Change \u00b7 Standard \u00b7 no add-ons",
+      "vehicle": "Toyota Corolla",
+      "category": "Sedan",
+      "input": {
+        "laborLowHours": 14,
+        "laborHighHours": 16,
+        "sqFtLow": 200,
+        "sqFtHigh": 210,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 15.0,
+          "sqFt": 205.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 410000.0,
+          "laborRevCents": 165000.0,
+          "materialOrderQtySqFt": 246.0,
+          "materialCostCents": 54120.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 575000,
+        "totalCostCents": 219120,
+        "grossProfitCents": 355880,
+        "grossMargin": 0.6189217391,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "toyota-corolla-printed-specialty-none",
+      "description": "Toyota Corolla \u00b7 Printed \u00b7 Specialty \u00b7 no add-ons",
+      "vehicle": "Toyota Corolla",
+      "category": "Sedan",
+      "input": {
+        "laborLowHours": 14,
+        "laborHighHours": 16,
+        "sqFtLow": 200,
+        "sqFtHigh": 210,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "specialty",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 15.0,
+          "sqFt": 205.0,
+          "rateCentsPerSqFt": 2300.0,
+          "baseWrapRevCents": 575230.0,
+          "laborRevCents": 165000.0,
+          "materialOrderQtySqFt": 246.0,
+          "materialCostCents": 54120.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 740230,
+        "totalCostCents": 219120,
+        "grossProfitCents": 521110,
+        "grossMargin": 0.7039838969,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "tesla-cybertruck-cc-easy-none",
+      "description": "Tesla Cybertruck \u00b7 Color Change \u00b7 Easy \u00b7 no add-ons \u2014 triggers REJECT",
+      "vehicle": "Tesla Cybertruck",
+      "category": "Specialty",
+      "input": {
+        "laborLowHours": 28,
+        "laborHighHours": 40,
+        "sqFtLow": 320,
+        "sqFtHigh": 350,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 34.0,
+          "sqFt": 335.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 636500.0,
+          "laborRevCents": 374000.0,
+          "materialOrderQtySqFt": 402.0,
+          "materialCostCents": 88440.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 1010500,
+        "totalCostCents": 462440,
+        "grossProfitCents": 548060,
+        "grossMargin": 0.5423651658,
+        "decision": "REJECT / REPRICE"
+      }
+    },
+    {
+      "id": "box-truck-cc-standard-none",
+      "description": "Box Truck 16-26 ft \u00b7 Color Change \u00b7 Standard \u00b7 no add-ons \u2014 commercial vehicle",
+      "vehicle": "Box Truck 16-26 ft",
+      "category": "Commercial",
+      "input": {
+        "laborLowHours": 26,
+        "laborHighHours": 38,
+        "sqFtLow": 400,
+        "sqFtHigh": 650,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 32.0,
+          "sqFt": 525.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 1050000.0,
+          "laborRevCents": 352000.0,
+          "materialOrderQtySqFt": 630.0,
+          "materialCostCents": 138600.0,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 1402000,
+        "totalCostCents": 490600,
+        "grossProfitCents": 911400,
+        "grossMargin": 0.6500713267,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "ford-transit-cc-standard-tint",
+      "description": "Ford Transit \u00b7 Color Change \u00b7 Standard \u00b7 Window Tint add-on",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {
+          "window_tint": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 580000.0,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 40000,
+          "addOnCostCents": 12000
+        },
+        "totalSellCents": 895000,
+        "totalCostCents": 363560,
+        "grossProfitCents": 531440,
+        "grossMargin": 0.5937877095,
+        "decision": "REVIEW"
+      }
+    },
+    {
+      "id": "ford-transit-cc-standard-ceramic-tint",
+      "description": "Ford Transit \u00b7 Color Change \u00b7 Standard \u00b7 Ceramic Coating + Window Tint",
+      "vehicle": "Ford Transit",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 28,
+        "sqFtLow": 280,
+        "sqFtHigh": 300,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {
+          "ceramic_coating": null,
+          "window_tint": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25.0,
+          "sqFt": 290.0,
+          "rateCentsPerSqFt": 2000.0,
+          "baseWrapRevCents": 580000.0,
+          "laborRevCents": 275000.0,
+          "materialOrderQtySqFt": 348.0,
+          "materialCostCents": 76560.0,
+          "addOnRevCents": 110000,
+          "addOnCostCents": 22000
+        },
+        "totalSellCents": 965000,
+        "totalCostCents": 373560,
+        "grossProfitCents": 591440,
+        "grossMargin": 0.6128911917,
+        "decision": "GOOD"
+      }
+    }
+  ]
+}
