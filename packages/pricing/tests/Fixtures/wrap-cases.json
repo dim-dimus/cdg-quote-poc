@@ -1,12 +1,12 @@
 {
-  "_note": "Ground-truth fixtures extracted from CDG_workbook.xlsx. Never edit expected values to make a test pass \u2014 fix the engine instead.",
+  "_note": "Ground-truth fixtures for the wrap engine. Inputs transcribed from CDG_workbook.xlsx; outputs computed by tests/Fixtures/compute_fixtures.mjs. Never edit expected values to make a test pass — fix the engine instead.",
   "config": {
     "shopRateCents": 11000,
     "wasteMultiplier": 1.2,
     "materialCostCentsPerSqFt": 220,
     "complexityMultipliers": {
       "easy": 0.95,
-      "standard": 1.0,
+      "standard": 1,
       "complex": 1.12,
       "specialty": 1.22
     },
@@ -49,7 +49,7 @@
   "cases": [
     {
       "id": "ford-transit-cc-easy-none",
-      "description": "Ford Transit \u00b7 Color Change \u00b7 Easy \u00b7 no add-ons",
+      "description": "Ford Transit · Color Change · Easy · no add-ons",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -65,13 +65,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 551000.0,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 551000,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -84,7 +84,7 @@
     },
     {
       "id": "ford-transit-cc-standard-none",
-      "description": "Ford Transit \u00b7 Color Change \u00b7 Standard \u00b7 no add-ons \u2014 baseline case",
+      "description": "Ford Transit · Color Change · Standard · no add-ons — baseline case",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -100,13 +100,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 580000.0,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 580000,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -119,7 +119,7 @@
     },
     {
       "id": "ford-transit-cc-complex-none",
-      "description": "Ford Transit \u00b7 Color Change \u00b7 Complex \u00b7 no add-ons",
+      "description": "Ford Transit · Color Change · Complex · no add-ons",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -135,13 +135,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2000.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2000,
           "baseWrapRevCents": 649600.0000000001,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -154,7 +154,7 @@
     },
     {
       "id": "ford-transit-cc-specialty-none",
-      "description": "Ford Transit \u00b7 Color Change \u00b7 Specialty \u00b7 no add-ons",
+      "description": "Ford Transit · Color Change · Specialty · no add-ons",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -170,13 +170,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 707600.0,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 707600,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -189,7 +189,7 @@
     },
     {
       "id": "ford-transit-printed-standard-none",
-      "description": "Ford Transit \u00b7 Printed \u00b7 Standard \u00b7 no add-ons",
+      "description": "Ford Transit · Printed · Standard · no add-ons",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -205,13 +205,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2300.0,
-          "baseWrapRevCents": 667000.0,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 667000,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -224,7 +224,7 @@
     },
     {
       "id": "ford-transit-printed-specialty-none",
-      "description": "Ford Transit \u00b7 Printed \u00b7 Specialty \u00b7 no add-ons",
+      "description": "Ford Transit · Printed · Specialty · no add-ons",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -240,13 +240,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2300.0,
-          "baseWrapRevCents": 813740.0,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 813740,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -259,7 +259,7 @@
     },
     {
       "id": "toyota-corolla-cc-standard-none",
-      "description": "Toyota Corolla \u00b7 Color Change \u00b7 Standard \u00b7 no add-ons",
+      "description": "Toyota Corolla · Color Change · Standard · no add-ons",
       "vehicle": "Toyota Corolla",
       "category": "Sedan",
       "input": {
@@ -275,13 +275,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 15.0,
-          "sqFt": 205.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 410000.0,
-          "laborRevCents": 165000.0,
-          "materialOrderQtySqFt": 246.0,
-          "materialCostCents": 54120.0,
+          "laborHours": 15,
+          "sqFt": 205,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 410000,
+          "laborRevCents": 165000,
+          "materialOrderQtySqFt": 246,
+          "materialCostCents": 54120,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -294,7 +294,7 @@
     },
     {
       "id": "toyota-corolla-printed-specialty-none",
-      "description": "Toyota Corolla \u00b7 Printed \u00b7 Specialty \u00b7 no add-ons",
+      "description": "Toyota Corolla · Printed · Specialty · no add-ons",
       "vehicle": "Toyota Corolla",
       "category": "Sedan",
       "input": {
@@ -310,13 +310,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 15.0,
-          "sqFt": 205.0,
-          "rateCentsPerSqFt": 2300.0,
-          "baseWrapRevCents": 575230.0,
-          "laborRevCents": 165000.0,
-          "materialOrderQtySqFt": 246.0,
-          "materialCostCents": 54120.0,
+          "laborHours": 15,
+          "sqFt": 205,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 575230,
+          "laborRevCents": 165000,
+          "materialOrderQtySqFt": 246,
+          "materialCostCents": 54120,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -329,7 +329,7 @@
     },
     {
       "id": "tesla-cybertruck-cc-easy-none",
-      "description": "Tesla Cybertruck \u00b7 Color Change \u00b7 Easy \u00b7 no add-ons \u2014 triggers REJECT",
+      "description": "Tesla Cybertruck · Color Change · Easy · no add-ons — triggers REJECT",
       "vehicle": "Tesla Cybertruck",
       "category": "Specialty",
       "input": {
@@ -345,13 +345,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 34.0,
-          "sqFt": 335.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 636500.0,
-          "laborRevCents": 374000.0,
-          "materialOrderQtySqFt": 402.0,
-          "materialCostCents": 88440.0,
+          "laborHours": 34,
+          "sqFt": 335,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 636500,
+          "laborRevCents": 374000,
+          "materialOrderQtySqFt": 402,
+          "materialCostCents": 88440,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -364,7 +364,7 @@
     },
     {
       "id": "box-truck-cc-standard-none",
-      "description": "Box Truck 16-26 ft \u00b7 Color Change \u00b7 Standard \u00b7 no add-ons \u2014 commercial vehicle",
+      "description": "Box Truck 16-26 ft · Color Change · Standard · no add-ons — commercial vehicle",
       "vehicle": "Box Truck 16-26 ft",
       "category": "Commercial",
       "input": {
@@ -380,13 +380,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 32.0,
-          "sqFt": 525.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 1050000.0,
-          "laborRevCents": 352000.0,
-          "materialOrderQtySqFt": 630.0,
-          "materialCostCents": 138600.0,
+          "laborHours": 32,
+          "sqFt": 525,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 1050000,
+          "laborRevCents": 352000,
+          "materialOrderQtySqFt": 630,
+          "materialCostCents": 138600,
           "addOnRevCents": 0,
           "addOnCostCents": 0
         },
@@ -399,7 +399,7 @@
     },
     {
       "id": "ford-transit-cc-standard-tint",
-      "description": "Ford Transit \u00b7 Color Change \u00b7 Standard \u00b7 Window Tint add-on",
+      "description": "Ford Transit · Color Change · Standard · Window Tint add-on",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -417,13 +417,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 580000.0,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 580000,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 40000,
           "addOnCostCents": 12000
         },
@@ -436,7 +436,7 @@
     },
     {
       "id": "ford-transit-cc-standard-ceramic-tint",
-      "description": "Ford Transit \u00b7 Color Change \u00b7 Standard \u00b7 Ceramic Coating + Window Tint",
+      "description": "Ford Transit · Color Change · Standard · Ceramic Coating + Window Tint",
       "vehicle": "Ford Transit",
       "category": "Van",
       "input": {
@@ -455,13 +455,13 @@
       },
       "expected": {
         "_intermediates": {
-          "laborHours": 25.0,
-          "sqFt": 290.0,
-          "rateCentsPerSqFt": 2000.0,
-          "baseWrapRevCents": 580000.0,
-          "laborRevCents": 275000.0,
-          "materialOrderQtySqFt": 348.0,
-          "materialCostCents": 76560.0,
+          "laborHours": 25,
+          "sqFt": 290,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 580000,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 348,
+          "materialCostCents": 76560,
           "addOnRevCents": 110000,
           "addOnCostCents": 22000
         },
@@ -470,6 +470,730 @@
         "grossProfitCents": 591440,
         "grossMargin": 0.6128911917,
         "decision": "GOOD"
+      }
+    },
+    {
+      "id": "sprinter-144-cc-standard-none",
+      "description": "Sprinter 144 · Color Change · Standard · no add-ons",
+      "vehicle": "Sprinter 144",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 24,
+        "laborHighHours": 30,
+        "sqFtLow": 300,
+        "sqFtHigh": 320,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 27,
+          "sqFt": 310,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 620000,
+          "laborRevCents": 297000,
+          "materialOrderQtySqFt": 372,
+          "materialCostCents": 81840,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 917000,
+        "totalCostCents": 378840,
+        "grossProfitCents": 538160,
+        "grossMargin": 0.586870229,
+        "decision": "REVIEW"
+      }
+    },
+    {
+      "id": "sprinter-170-printed-complex-none",
+      "description": "Sprinter 170 · Printed · Complex · no add-ons",
+      "vehicle": "Sprinter 170",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 28,
+        "laborHighHours": 36,
+        "sqFtLow": 340,
+        "sqFtHigh": 370,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "complex",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 32,
+          "sqFt": 355,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 914480.0000000001,
+          "laborRevCents": 352000,
+          "materialOrderQtySqFt": 426,
+          "materialCostCents": 93720,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 1266480,
+        "totalCostCents": 445720,
+        "grossProfitCents": 820760,
+        "grossMargin": 0.6480639252,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "rav4-cc-easy-none",
+      "description": "Toyota RAV4 · Color Change · Easy · no add-ons",
+      "vehicle": "Toyota RAV4",
+      "category": "Small SUV",
+      "input": {
+        "laborLowHours": 16,
+        "laborHighHours": 18,
+        "sqFtLow": 220,
+        "sqFtHigh": 230,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 17,
+          "sqFt": 225,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 427500,
+          "laborRevCents": 187000,
+          "materialOrderQtySqFt": 270,
+          "materialCostCents": 59400,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 614500,
+        "totalCostCents": 246400,
+        "grossProfitCents": 368100,
+        "grossMargin": 0.5990235964,
+        "decision": "REVIEW"
+      }
+    },
+    {
+      "id": "model-y-printed-standard-tint",
+      "description": "Tesla Model Y · Printed · Standard · Window Tint",
+      "vehicle": "Tesla Model Y",
+      "category": "Small SUV",
+      "input": {
+        "laborLowHours": 18,
+        "laborHighHours": 20,
+        "sqFtLow": 230,
+        "sqFtHigh": 240,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "standard",
+        "addOnSelections": {
+          "window_tint": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 19,
+          "sqFt": 235,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 540500,
+          "laborRevCents": 209000,
+          "materialOrderQtySqFt": 282,
+          "materialCostCents": 62040,
+          "addOnRevCents": 40000,
+          "addOnCostCents": 12000
+        },
+        "totalSellCents": 789500,
+        "totalCostCents": 283040,
+        "grossProfitCents": 506460,
+        "grossMargin": 0.6414946168,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "defender-cc-complex-trim",
+      "description": "Land Rover Defender · Color Change · Complex · Trim Removal",
+      "vehicle": "Land Rover Defender",
+      "category": "Mid SUV",
+      "input": {
+        "laborLowHours": 20,
+        "laborHighHours": 24,
+        "sqFtLow": 250,
+        "sqFtHigh": 260,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "complex",
+        "addOnSelections": {
+          "trim_removal": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 22,
+          "sqFt": 255,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 571200,
+          "laborRevCents": 242000,
+          "materialOrderQtySqFt": 306,
+          "materialCostCents": 67320,
+          "addOnRevCents": 30000,
+          "addOnCostCents": 7500
+        },
+        "totalSellCents": 843200,
+        "totalCostCents": 316820,
+        "grossProfitCents": 526380,
+        "grossMargin": 0.6242647059,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "grand-cherokee-printed-standard-none",
+      "description": "Jeep Grand Cherokee · Printed · Standard · no add-ons",
+      "vehicle": "Jeep Grand Cherokee",
+      "category": "Mid SUV",
+      "input": {
+        "laborLowHours": 18,
+        "laborHighHours": 22,
+        "sqFtLow": 240,
+        "sqFtHigh": 250,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 20,
+          "sqFt": 245,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 563500,
+          "laborRevCents": 220000,
+          "materialOrderQtySqFt": 294,
+          "materialCostCents": 64680,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 783500,
+        "totalCostCents": 284680,
+        "grossProfitCents": 498820,
+        "grossMargin": 0.6366560306,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "escalade-printed-specialty-ceramic",
+      "description": "Cadillac Escalade · Printed · Specialty · Ceramic Coating",
+      "vehicle": "Cadillac Escalade",
+      "category": "Full SUV",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 26,
+        "sqFtLow": 270,
+        "sqFtHigh": 285,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "specialty",
+        "addOnSelections": {
+          "ceramic_coating": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 24,
+          "sqFt": 277.5,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 778665,
+          "laborRevCents": 264000,
+          "materialOrderQtySqFt": 333,
+          "materialCostCents": 73260,
+          "addOnRevCents": 70000,
+          "addOnCostCents": 10000
+        },
+        "totalSellCents": 1112665,
+        "totalCostCents": 347260,
+        "grossProfitCents": 765405,
+        "grossMargin": 0.6879024684,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "tahoe-cc-standard-none",
+      "description": "Chevy Tahoe · Color Change · Standard · no add-ons",
+      "vehicle": "Chevy Tahoe",
+      "category": "Full SUV",
+      "input": {
+        "laborLowHours": 20,
+        "laborHighHours": 24,
+        "sqFtLow": 260,
+        "sqFtHigh": 275,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 22,
+          "sqFt": 267.5,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 535000,
+          "laborRevCents": 242000,
+          "materialOrderQtySqFt": 321,
+          "materialCostCents": 70620,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 777000,
+        "totalCostCents": 312620,
+        "grossProfitCents": 464380,
+        "grossMargin": 0.5976576577,
+        "decision": "REVIEW"
+      }
+    },
+    {
+      "id": "f150-cc-easy-none",
+      "description": "Ford F150 · Color Change · Easy · no add-ons",
+      "vehicle": "Ford F150",
+      "category": "Truck",
+      "input": {
+        "laborLowHours": 20,
+        "laborHighHours": 24,
+        "sqFtLow": 260,
+        "sqFtHigh": 280,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 22,
+          "sqFt": 270,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 513000,
+          "laborRevCents": 242000,
+          "materialOrderQtySqFt": 324,
+          "materialCostCents": 71280,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 755000,
+        "totalCostCents": 313280,
+        "grossProfitCents": 441720,
+        "grossMargin": 0.5850596026,
+        "decision": "REVIEW"
+      }
+    },
+    {
+      "id": "raptor-printed-specialty-none",
+      "description": "Ford Raptor · Printed · Specialty · no add-ons",
+      "vehicle": "Ford Raptor",
+      "category": "Truck",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 26,
+        "sqFtLow": 270,
+        "sqFtHigh": 290,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "specialty",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 24,
+          "sqFt": 280,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 785680,
+          "laborRevCents": 264000,
+          "materialOrderQtySqFt": 336,
+          "materialCostCents": 73920,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 1049680,
+        "totalCostCents": 337920,
+        "grossProfitCents": 711760,
+        "grossMargin": 0.6780733176,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "silverado-cc-complex-prep",
+      "description": "Chevy Silverado · Color Change · Complex · Prep Fee",
+      "vehicle": "Chevy Silverado",
+      "category": "Truck",
+      "input": {
+        "laborLowHours": 20,
+        "laborHighHours": 24,
+        "sqFtLow": 260,
+        "sqFtHigh": 280,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "complex",
+        "addOnSelections": {
+          "prep_fee": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 22,
+          "sqFt": 270,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 604800,
+          "laborRevCents": 242000,
+          "materialOrderQtySqFt": 324,
+          "materialCostCents": 71280,
+          "addOnRevCents": 25000,
+          "addOnCostCents": 4000
+        },
+        "totalSellCents": 871800,
+        "totalCostCents": 317280,
+        "grossProfitCents": 554520,
+        "grossMargin": 0.6360633173,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "model-3-printed-standard-design-basic",
+      "description": "Tesla Model 3 · Printed · Standard · Design Basic",
+      "vehicle": "Tesla Model 3",
+      "category": "Sedan",
+      "input": {
+        "laborLowHours": 16,
+        "laborHighHours": 18,
+        "sqFtLow": 210,
+        "sqFtHigh": 220,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "standard",
+        "addOnSelections": {
+          "design_basic": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 17,
+          "sqFt": 215,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 494500,
+          "laborRevCents": 187000,
+          "materialOrderQtySqFt": 258,
+          "materialCostCents": 56760,
+          "addOnRevCents": 30000,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 711500,
+        "totalCostCents": 243760,
+        "grossProfitCents": 467740,
+        "grossMargin": 0.6573998595,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "civic-cc-easy-design-advanced",
+      "description": "Honda Civic · Color Change · Easy · Design Advanced",
+      "vehicle": "Honda Civic",
+      "category": "Sedan",
+      "input": {
+        "laborLowHours": 14,
+        "laborHighHours": 16,
+        "sqFtLow": 200,
+        "sqFtHigh": 210,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {
+          "design_advanced": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 15,
+          "sqFt": 205,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 389500,
+          "laborRevCents": 165000,
+          "materialOrderQtySqFt": 246,
+          "materialCostCents": 54120,
+          "addOnRevCents": 120000,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 674500,
+        "totalCostCents": 219120,
+        "grossProfitCents": 455380,
+        "grossMargin": 0.6751371386,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "wrangler-cc-easy-none",
+      "description": "Jeep Wrangler 4 Door · Color Change · Easy · no add-ons — triggers REJECT",
+      "vehicle": "Jeep Wrangler 4 Door",
+      "category": "Specialty",
+      "input": {
+        "laborLowHours": 20,
+        "laborHighHours": 26,
+        "sqFtLow": 230,
+        "sqFtHigh": 240,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 23,
+          "sqFt": 235,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 446500,
+          "laborRevCents": 253000,
+          "materialOrderQtySqFt": 282,
+          "materialCostCents": 62040,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 699500,
+        "totalCostCents": 315040,
+        "grossProfitCents": 384460,
+        "grossMargin": 0.549621158,
+        "decision": "REJECT / REPRICE"
+      }
+    },
+    {
+      "id": "wrangler-printed-specialty-trim-prep",
+      "description": "Jeep Wrangler 4 Door · Printed · Specialty · Trim Removal + Prep Fee",
+      "vehicle": "Jeep Wrangler 4 Door",
+      "category": "Specialty",
+      "input": {
+        "laborLowHours": 20,
+        "laborHighHours": 26,
+        "sqFtLow": 230,
+        "sqFtHigh": 240,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "specialty",
+        "addOnSelections": {
+          "trim_removal": null,
+          "prep_fee": null
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 23,
+          "sqFt": 235,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 659410,
+          "laborRevCents": 253000,
+          "materialOrderQtySqFt": 282,
+          "materialCostCents": 62040,
+          "addOnRevCents": 55000,
+          "addOnCostCents": 11500
+        },
+        "totalSellCents": 967410,
+        "totalCostCents": 326540,
+        "grossProfitCents": 640870,
+        "grossMargin": 0.662459557,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "cargo-trailer-printed-standard-none",
+      "description": "Cargo Trailer · Printed · Standard · no add-ons",
+      "vehicle": "Cargo Trailer",
+      "category": "Commercial",
+      "input": {
+        "laborLowHours": 20,
+        "laborHighHours": 30,
+        "sqFtLow": 320,
+        "sqFtHigh": 500,
+        "rateLowCents": 1800,
+        "rateHighCents": 2800,
+        "complexity": "standard",
+        "addOnSelections": {},
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 25,
+          "sqFt": 410,
+          "rateCentsPerSqFt": 2300,
+          "baseWrapRevCents": 943000,
+          "laborRevCents": 275000,
+          "materialOrderQtySqFt": 492,
+          "materialCostCents": 108240,
+          "addOnRevCents": 0,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 1218000,
+        "totalCostCents": 383240,
+        "grossProfitCents": 834760,
+        "grossMargin": 0.6853530378,
+        "decision": "STRONG"
+      }
+    },
+    {
+      "id": "service-pickup-cc-standard-design-custom-override",
+      "description": "Service Pickup · Color Change · Standard · Design Custom (price override $500)",
+      "vehicle": "Service Pickup",
+      "category": "Commercial",
+      "input": {
+        "laborLowHours": 18,
+        "laborHighHours": 24,
+        "sqFtLow": 240,
+        "sqFtHigh": 260,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "standard",
+        "addOnSelections": {
+          "design_custom": 50000
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 21,
+          "sqFt": 250,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 500000,
+          "laborRevCents": 231000,
+          "materialOrderQtySqFt": 300,
+          "materialCostCents": 66000,
+          "addOnRevCents": 50000,
+          "addOnCostCents": 0
+        },
+        "totalSellCents": 781000,
+        "totalCostCents": 297000,
+        "grossProfitCents": 484000,
+        "grossMargin": 0.6197183099,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "model-x-cc-complex-tint-override",
+      "description": "Tesla Model X · Color Change · Complex · Window Tint (price override $550)",
+      "vehicle": "Tesla Model X",
+      "category": "General",
+      "input": {
+        "laborLowHours": 18,
+        "laborHighHours": 22,
+        "sqFtLow": 240,
+        "sqFtHigh": 260,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "complex",
+        "addOnSelections": {
+          "window_tint": 55000
+        },
+        "requestedFinish": "Satin"
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 20,
+          "sqFt": 250,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 560000,
+          "laborRevCents": 220000,
+          "materialOrderQtySqFt": 300,
+          "materialCostCents": 66000,
+          "addOnRevCents": 55000,
+          "addOnCostCents": 12000
+        },
+        "totalSellCents": 835000,
+        "totalCostCents": 298000,
+        "grossProfitCents": 537000,
+        "grossMargin": 0.6431137725,
+        "decision": "GOOD"
+      }
+    },
+    {
+      "id": "rivian-r1t-cc-easy-tint-comped-override",
+      "description": "Rivian R1T · Color Change · Easy · Window Tint comped ($0) — override pushes to REJECT",
+      "vehicle": "Rivian R1T",
+      "category": "Specialty",
+      "input": {
+        "laborLowHours": 22,
+        "laborHighHours": 26,
+        "sqFtLow": 260,
+        "sqFtHigh": 270,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {
+          "window_tint": 0
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 24,
+          "sqFt": 265,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 503500,
+          "laborRevCents": 264000,
+          "materialOrderQtySqFt": 318,
+          "materialCostCents": 69960,
+          "addOnRevCents": 0,
+          "addOnCostCents": 12000
+        },
+        "totalSellCents": 767500,
+        "totalCostCents": 345960,
+        "grossProfitCents": 421540,
+        "grossMargin": 0.549237785,
+        "decision": "REJECT / REPRICE"
+      }
+    },
+    {
+      "id": "sprinter-170-cc-easy-tint-ceramic-comped-override",
+      "description": "Sprinter 170 · Color Change · Easy · Window Tint + Ceramic comped ($0) — override pushes to REJECT",
+      "vehicle": "Sprinter 170",
+      "category": "Van",
+      "input": {
+        "laborLowHours": 28,
+        "laborHighHours": 36,
+        "sqFtLow": 340,
+        "sqFtHigh": 370,
+        "rateLowCents": 1600,
+        "rateHighCents": 2400,
+        "complexity": "easy",
+        "addOnSelections": {
+          "window_tint": 0,
+          "ceramic_coating": 0
+        },
+        "requestedFinish": null
+      },
+      "expected": {
+        "_intermediates": {
+          "laborHours": 32,
+          "sqFt": 355,
+          "rateCentsPerSqFt": 2000,
+          "baseWrapRevCents": 674500,
+          "laborRevCents": 352000,
+          "materialOrderQtySqFt": 426,
+          "materialCostCents": 93720,
+          "addOnRevCents": 0,
+          "addOnCostCents": 22000
+        },
+        "totalSellCents": 1026500,
+        "totalCostCents": 467720,
+        "grossProfitCents": 558780,
+        "grossMargin": 0.544354603,
+        "decision": "REJECT / REPRICE"
       }
     }
   ]

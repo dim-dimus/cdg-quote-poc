@@ -73,6 +73,6 @@ it('reproduces workbook output to the cent: $description', function (
     expect($result->totalSellCents)  ->toBe($expected['totalSellCents'],   "{$id}: totalSellCents");
     expect($result->totalCostCents)  ->toBe($expected['totalCostCents'],   "{$id}: totalCostCents");
     expect($result->grossProfitCents)->toBe($expected['grossProfitCents'], "{$id}: grossProfitCents");
-    expect($result->grossMargin)     ->toBeCloseTo($expected['grossMargin'], 8, "{$id}: grossMargin");
+    expect($result->grossMargin)     ->toEqualWithDelta($expected['grossMargin'], 1e-8, "{$id}: grossMargin");
     expect($result->decision)        ->toBe($expected['decision'],         "{$id}: decision");
 })->with('wrap_cases');
