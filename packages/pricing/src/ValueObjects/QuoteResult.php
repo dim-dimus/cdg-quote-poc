@@ -12,12 +12,13 @@ namespace CDG\Pricing\ValueObjects;
 final readonly class QuoteResult
 {
     /**
-     * @param ServiceLine[] $lines
-     * @param int           $totalSellCents
-     * @param int           $totalCostCents
-     * @param int           $grossProfitCents
-     * @param float         $grossMargin  Full-precision ratio; 0.0 when sell is zero.
-     * @param string        $decision     e.g. "STRONG", "GOOD", "REVIEW", "REJECT / REPRICE"
+     * @param ServiceLine[]                        $lines
+     * @param int                                  $totalSellCents
+     * @param int                                  $totalCostCents
+     * @param int                                  $grossProfitCents
+     * @param float                                $grossMargin  Full-precision ratio; 0.0 when sell is zero.
+     * @param string                               $decision     e.g. "STRONG", "GOOD", "REVIEW", "REJECT / REPRICE"
+     * @param array<string, BreakdownMetric[]>     $breakdown    Diagnostics keyed by service type, in display order.
      */
     public function __construct(
         public array $lines,
@@ -26,6 +27,7 @@ final readonly class QuoteResult
         public int $grossProfitCents,
         public float $grossMargin,
         public string $decision,
+        public array $breakdown = [],
     ) {
     }
 }

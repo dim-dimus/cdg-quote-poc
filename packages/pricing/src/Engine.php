@@ -30,12 +30,17 @@ final class Engine
     public function run(array $inputs, PricingConfig $config): QuoteResult
     {
         $lines = [];
+        $breakdown = [];
 
         foreach ($inputs as $serviceType => $input) {
             $calculator = $this->registry->get($serviceType);
-            foreach ($calculator->calculate($input, $config) as $line) {
+            $result = $calculator->calculate($input, $config);
+
+            foreach ($result->lines as $line) {
                 $lines[] = $line;
             }
+
+            $breakdown[$serviceType] = $result->breakdown;
         }
 
         $totalSellCents = 0;
@@ -58,6 +63,7 @@ final class Engine
             grossProfitCents: $grossProfitCents,
             grossMargin: $grossMargin,
             decision: Decision::fromMargin($grossMargin, $config),
+            breakdown: $breakdown,
         );
     }
 }

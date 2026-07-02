@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Schema;
  * output. Totals are stored as integer cents in typed columns; the itemized
  * ServiceLine breakdown is stored as JSON so the quote can be re-displayed
  * exactly as sold, even after admin later changes prices (Phase 6).
+ *
+ * A quote is an immutable financial record. Because vehicles and pricing config
+ * become admin-editable in Phase 6, we freeze everything needed to reproduce it
+ * to the cent — the resolved inputs (input_snapshot) and the pricing knobs used
+ * (config_snapshot) — so historical quotes never silently drift after an edit.
  */
 return new class extends Migration
 {
@@ -18,9 +23,13 @@ return new class extends Migration
     {
         Schema::create('quotes', function (Blueprint $table) {
             $table->id();
+
+            // Who created it (kept even if the staff account is later removed).
+            $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete();
+
             $table->string('customer_name')->nullable();
 
-            // Resolved inputs
+            // Resolved inputs (references + the frozen values behind them).
             $table->foreignId('vehicle_id')->constrained()->restrictOnDelete();
             $table->foreignId('wrap_rate_id')->constrained()->restrictOnDelete();
             $table->string('complexity');
@@ -33,7 +42,12 @@ return new class extends Migration
             $table->integer('gross_profit_cents');
             $table->decimal('gross_margin', 9, 8);
             $table->string('decision');
-            $table->json('lines'); // itemized ServiceLine breakdown at quote time
+            $table->json('lines');            // itemized ServiceLine breakdown at quote time
+            $table->json('breakdown');        // engine diagnostics (labor hrs, sqft, rate, ...)
+
+            // Immutable snapshots so the quote reproduces after Phase 6 edits.
+            $table->json('input_snapshot');   // resolved WrapInput + display names
+            $table->json('config_snapshot');  // PricingConfig knobs used at quote time
 
             $table->timestamps();
         });

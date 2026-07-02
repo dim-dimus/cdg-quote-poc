@@ -45,7 +45,7 @@ final class PricingConfigRepository
     }
 
     /**
-     * @return array<string, array{priceCents: int, costCents: int}>
+     * @return array<string, array{name: string, priceCents: int, costCents: int}>
      */
     private function addOnCatalog(): array
     {
@@ -53,6 +53,7 @@ final class PricingConfigRepository
             ->get()
             ->mapWithKeys(fn (AddOn $addOn) => [
                 $addOn->key => [
+                    'name'       => $addOn->name,
                     'priceCents' => $addOn->price_cents,
                     'costCents'  => $addOn->cost_cents,
                 ],

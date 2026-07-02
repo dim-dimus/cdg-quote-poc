@@ -10,7 +10,7 @@ namespace CDG\Pricing\ValueObjects;
  *
  * @property array{easy: float, standard: float, complex: float, specialty: float} $complexityMultipliers
  * @property array{reject: float, review: float, strong: float} $marginFloors
- * @property array<string, array{priceCents: int, costCents: int}> $addOns
+ * @property array<string, array{name?: string, priceCents: int, costCents: int}> $addOns
  */
 final readonly class PricingConfig
 {
@@ -22,8 +22,9 @@ final readonly class PricingConfig
      * @param array{reject: float, review: float, strong: float} $marginFloors
      *        Margin thresholds: below reject → REJECT/REPRICE; below review → REVIEW;
      *        below strong → GOOD; otherwise → STRONG.
-     * @param array<string, array{priceCents: int, costCents: int}> $addOns
-     *        Add-on catalog keyed by add-on identifier.
+     * @param array<string, array{name?: string, priceCents: int, costCents: int}> $addOns
+     *        Add-on catalog keyed by add-on identifier. Optional display "name"
+     *        is used for the line description; falls back to the key if absent.
      */
     public function __construct(
         public int $shopRateCents,

@@ -7,6 +7,8 @@ namespace CDG\Pricing\Modules\Wrap;
 use CDG\Pricing\Contracts\Calculator;
 use CDG\Pricing\Contracts\CalculatorInput;
 use CDG\Pricing\Support\Rounding;
+use CDG\Pricing\ValueObjects\BreakdownMetric;
+use CDG\Pricing\ValueObjects\CalculationResult;
 use CDG\Pricing\ValueObjects\PricingConfig;
 use CDG\Pricing\ValueObjects\ServiceLine;
 
@@ -31,10 +33,7 @@ final class WrapCalculator implements Calculator
         return 'wrap';
     }
 
-    /**
-     * @return ServiceLine[]
-     */
-    public function calculate(CalculatorInput $input, PricingConfig $config): array
+    public function calculate(CalculatorInput $input, PricingConfig $config): CalculationResult
     {
         if (! $input instanceof WrapInput) {
             throw new \InvalidArgumentException(
@@ -74,18 +73,39 @@ final class WrapCalculator implements Calculator
         ];
 
         // Add-ons: sell price is overridable per quote (D7); cost never is.
+        $addOnRevCents = 0;
+        $addOnCostCents = 0;
         foreach ($input->addOnSelections as $key => $overrideSellCents) {
             $addOn = $config->addOns[$key]
                 ?? throw new \InvalidArgumentException("Unknown add-on: {$key}.");
 
+            $sellCents = $overrideSellCents ?? $addOn['priceCents'];
+            $addOnRevCents += $sellCents;
+            $addOnCostCents += $addOn['costCents'];
+
             $lines[] = new ServiceLine(
                 serviceType: 'wrap',
-                description: "Add-on: {$key}",
-                sellCents:   $overrideSellCents ?? $addOn['priceCents'],
+                description: 'Add-on: ' . ($addOn['name'] ?? $key),
+                sellCents:   $sellCents,
                 costCents:   $addOn['costCents'],
             );
         }
 
-        return $lines;
+        // Diagnostics, in the workbook's row order. Display-only: money is
+        // rounded to whole cents (like the lines), dimensions kept as floats.
+        $breakdown = [
+            new BreakdownMetric('Base Labor Hours', $laborHours, 'hours'),
+            new BreakdownMetric('Base Surface Area', $sqFt, 'sqft'),
+            new BreakdownMetric('Rate per sq ft', Rounding::toCents($rateCents), 'cents'),
+            new BreakdownMetric('Base Wrap Revenue', Rounding::toCents($baseWrapRevCents), 'cents'),
+            new BreakdownMetric('Shop Rate', $config->shopRateCents, 'cents'),
+            new BreakdownMetric('Labor Revenue', Rounding::toCents($laborRevCents), 'cents'),
+            new BreakdownMetric('Material Cost', Rounding::toCents($materialCostCents), 'cents'),
+            new BreakdownMetric('Material Order Qty', $materialQtySqFt, 'sqft'),
+            new BreakdownMetric('Add-On Revenue', $addOnRevCents, 'cents'),
+            new BreakdownMetric('Add-On Cost', $addOnCostCents, 'cents'),
+        ];
+
+        return new CalculationResult(lines: $lines, breakdown: $breakdown);
     }
 }

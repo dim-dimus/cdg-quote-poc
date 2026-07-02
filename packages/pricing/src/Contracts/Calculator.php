@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace CDG\Pricing\Contracts;
 
+use CDG\Pricing\ValueObjects\CalculationResult;
 use CDG\Pricing\ValueObjects\PricingConfig;
-use CDG\Pricing\ValueObjects\ServiceLine;
 
 /**
  * A Calculator prices one service type (wrap, ppf, tint, ceramic, detailing...).
@@ -23,9 +23,8 @@ interface Calculator
     public function serviceType(): string;
 
     /**
-     * Produce the priced line(s) for this service from validated input.
-     *
-     * @return ServiceLine[] one or more lines (description, sell, cost in cents)
+     * Produce the priced line(s) and diagnostic breakdown for this service
+     * from validated input.
      */
-    public function calculate(CalculatorInput $input, PricingConfig $config): array;
+    public function calculate(CalculatorInput $input, PricingConfig $config): CalculationResult;
 }
