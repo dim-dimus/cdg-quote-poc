@@ -16,10 +16,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // Default front-desk login for the POC (documented in the README).
+        // Default logins for the POC (documented in the README).
         User::updateOrCreate(
             ['email' => 'staff@calidreamgarage.test'],
-            ['name' => 'Front Desk', 'password' => Hash::make('password')],
+            ['name' => 'Front Desk', 'password' => Hash::make('password'), 'is_admin' => false],
+        );
+
+        User::updateOrCreate(
+            ['email' => 'admin@calidreamgarage.test'],
+            ['name' => 'Shop Admin', 'password' => Hash::make('password'), 'is_admin' => true],
         );
 
         $this->call(WorkbookSeeder::class);

@@ -11,11 +11,18 @@
     <div class="min-h-full">
         @auth
             <header class="border-b border-slate-200 bg-white">
-                <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+                <div class="relative mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
                     <a href="{{ route('front-desk') }}" class="flex items-center gap-2 font-semibold">
                         <span class="rounded bg-slate-900 px-2 py-1 text-sm text-white">CDG</span>
                         <span>Front Desk — Wrap Quote</span>
                     </a>
+                    @can('admin')
+                        <nav class="absolute left-1/2 flex -translate-x-1/2 items-center gap-6 text-sm">
+                            <a href="{{ route('front-desk') }}" class="text-slate-600 hover:text-slate-900">Front Desk</a>
+                            <a href="{{ route('admin.pricing') }}" class="text-slate-600 hover:text-slate-900">Pricing</a>
+                            <a href="{{ route('admin.vehicles') }}" class="text-slate-600 hover:text-slate-900">Vehicles</a>
+                        </nav>
+                    @endcan
                     <div class="flex items-center gap-4 text-sm">
                         <span class="text-slate-500">{{ auth()->user()->name }}</span>
                         <form method="POST" action="{{ route('logout') }}">
