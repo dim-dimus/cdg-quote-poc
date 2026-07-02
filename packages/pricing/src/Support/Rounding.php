@@ -16,7 +16,7 @@ final class Rounding
     /**
      * Round a floating-point cent amount to the nearest whole cent, half-up.
      *
-     * @param float $cents  An amount already expressed in cents (not dollars).
+     * @param  float  $cents  An amount already expressed in cents (not dollars).
      */
     public static function toCents(float $cents): int
     {

@@ -11,7 +11,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
 /**
  * The admin screens are gated by the "admin" Gate: authenticated + is_admin.
  */
-
 uses(RefreshDatabase::class);
 
 beforeEach(function () {

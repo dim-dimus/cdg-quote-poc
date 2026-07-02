@@ -11,6 +11,4 @@ namespace CDG\Pricing\Contracts;
  * this interface. Inputs should be `readonly` and carry only the per-quote
  * specifics already resolved by the application layer — never raw DB rows.
  */
-interface CalculatorInput
-{
-}
+interface CalculatorInput {}

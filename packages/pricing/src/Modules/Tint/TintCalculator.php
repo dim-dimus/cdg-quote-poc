@@ -30,15 +30,15 @@ final class TintCalculator implements Calculator
     {
         if (! $input instanceof TintInput) {
             throw new \InvalidArgumentException(
-                'TintCalculator expects a TintInput, got ' . $input::class . '.'
+                'TintCalculator expects a TintInput, got '.$input::class.'.'
             );
         }
 
         $line = new ServiceLine(
             serviceType: 'tint',
             description: "Window tint ({$input->windowCount} windows)",
-            sellCents:   Rounding::toCents($input->windowCount * $input->pricePerWindowCents),
-            costCents:   Rounding::toCents($input->windowCount * $input->costPerWindowCents),
+            sellCents: Rounding::toCents($input->windowCount * $input->pricePerWindowCents),
+            costCents: Rounding::toCents($input->windowCount * $input->costPerWindowCents),
         );
 
         return new CalculationResult(lines: [$line]);

@@ -15,12 +15,11 @@ namespace CDG\Pricing\ValueObjects;
 final readonly class CalculationResult
 {
     /**
-     * @param ServiceLine[]     $lines     One or more priced lines (sell/cost in cents).
-     * @param BreakdownMetric[] $breakdown Diagnostics in display order (may be empty).
+     * @param  ServiceLine[]  $lines  One or more priced lines (sell/cost in cents).
+     * @param  BreakdownMetric[]  $breakdown  Diagnostics in display order (may be empty).
      */
     public function __construct(
         public array $lines,
         public array $breakdown = [],
-    ) {
-    }
+    ) {}
 }

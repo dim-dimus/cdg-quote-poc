@@ -15,8 +15,7 @@ final readonly class ServiceLine
         public string $description,
         public int $sellCents,
         public int $costCents,
-    ) {
-    }
+    ) {}
 
     public function grossProfitCents(): int
     {

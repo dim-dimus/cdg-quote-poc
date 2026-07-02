@@ -15,7 +15,6 @@ use Livewire\Livewire;
  * Admin vehicle catalog CRUD, including the guard that a vehicle referenced by
  * an existing quote cannot be deleted.
  */
-
 uses(RefreshDatabase::class);
 
 beforeEach(function () {
@@ -86,9 +85,9 @@ it('blocks deleting a vehicle referenced by a quote', function () {
     $vehicle = Vehicle::where('name', 'Ford Transit')->firstOrFail();
 
     app(QuoteService::class)->create(new QuoteRequest(
-        vehicleId:   $vehicle->id,
+        vehicleId: $vehicle->id,
         wrapTypeKey: 'color_change',
-        complexity:  'standard',
+        complexity: 'standard',
     ));
 
     Livewire::test(Vehicles::class)->call('delete', $vehicle->id);

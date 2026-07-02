@@ -26,14 +26,23 @@ class PricingSettings extends Component
 {
     // Shop settings (money fields are dollars; the rest are decimals).
     public string $shopRate = '';            // $/hr
+
     public string $materialCost = '';        // $/sq ft
+
     public string $wasteMultiplier = '';
+
     public string $complexityEasy = '';
+
     public string $complexityStandard = '';
+
     public string $complexityComplex = '';
+
     public string $complexitySpecialty = '';
+
     public string $marginReject = '';
+
     public string $marginReview = '';
+
     public string $marginStrong = '';
 
     /** @var array<int, array{name: string, low: string, high: string}> keyed by wrap_rate id (dollars) */
@@ -46,29 +55,29 @@ class PricingSettings extends Component
     {
         $s = ShopSetting::query()->pluck('value', 'key');
 
-        $this->shopRate            = Money::forInput((int) round($s['shop_rate_cents']));
-        $this->materialCost        = Money::forInput((int) round($s['material_cost_cents_per_sqft']));
-        $this->wasteMultiplier     = (string) $s['waste_multiplier'];
-        $this->complexityEasy      = (string) $s['complexity_multiplier_easy'];
-        $this->complexityStandard  = (string) $s['complexity_multiplier_standard'];
-        $this->complexityComplex   = (string) $s['complexity_multiplier_complex'];
+        $this->shopRate = Money::forInput((int) round($s['shop_rate_cents']));
+        $this->materialCost = Money::forInput((int) round($s['material_cost_cents_per_sqft']));
+        $this->wasteMultiplier = (string) $s['waste_multiplier'];
+        $this->complexityEasy = (string) $s['complexity_multiplier_easy'];
+        $this->complexityStandard = (string) $s['complexity_multiplier_standard'];
+        $this->complexityComplex = (string) $s['complexity_multiplier_complex'];
         $this->complexitySpecialty = (string) $s['complexity_multiplier_specialty'];
-        $this->marginReject        = (string) $s['margin_floor_reject'];
-        $this->marginReview        = (string) $s['margin_floor_review'];
-        $this->marginStrong        = (string) $s['margin_floor_strong'];
+        $this->marginReject = (string) $s['margin_floor_reject'];
+        $this->marginReview = (string) $s['margin_floor_review'];
+        $this->marginStrong = (string) $s['margin_floor_strong'];
 
         $this->wrapRates = WrapRate::orderBy('name')->get()
             ->mapWithKeys(fn (WrapRate $r) => [$r->id => [
                 'name' => $r->name,
-                'low'  => Money::forInput($r->rate_low_cents),
+                'low' => Money::forInput($r->rate_low_cents),
                 'high' => Money::forInput($r->rate_high_cents),
             ]])->all();
 
         $this->addOns = AddOn::orderBy('name')->get()
             ->mapWithKeys(fn (AddOn $a) => [$a->id => [
-                'name'  => $a->name,
+                'name' => $a->name,
                 'price' => Money::forInput($a->price_cents),
-                'cost'  => Money::forInput($a->cost_cents),
+                'cost' => Money::forInput($a->cost_cents),
             ]])->all();
     }
 
@@ -76,20 +85,20 @@ class PricingSettings extends Component
     protected function rules(): array
     {
         return [
-            'shopRate'            => ['required', 'numeric', 'min:0'],
-            'materialCost'       => ['required', 'numeric', 'min:0'],
-            'wasteMultiplier'    => ['required', 'numeric', 'min:0'],
-            'complexityEasy'     => ['required', 'numeric', 'gt:0'],
+            'shopRate' => ['required', 'numeric', 'min:0'],
+            'materialCost' => ['required', 'numeric', 'min:0'],
+            'wasteMultiplier' => ['required', 'numeric', 'min:0'],
+            'complexityEasy' => ['required', 'numeric', 'gt:0'],
             'complexityStandard' => ['required', 'numeric', 'gt:0'],
-            'complexityComplex'  => ['required', 'numeric', 'gt:0'],
+            'complexityComplex' => ['required', 'numeric', 'gt:0'],
             'complexitySpecialty' => ['required', 'numeric', 'gt:0'],
-            'marginReject'       => ['required', 'numeric', 'between:0,1'],
-            'marginReview'       => ['required', 'numeric', 'between:0,1'],
-            'marginStrong'       => ['required', 'numeric', 'between:0,1'],
-            'wrapRates.*.low'    => ['required', 'numeric', 'min:0'],
-            'wrapRates.*.high'   => ['required', 'numeric', 'min:0'],
-            'addOns.*.price'     => ['required', 'numeric', 'min:0'],
-            'addOns.*.cost'      => ['required', 'numeric', 'min:0'],
+            'marginReject' => ['required', 'numeric', 'between:0,1'],
+            'marginReview' => ['required', 'numeric', 'between:0,1'],
+            'marginStrong' => ['required', 'numeric', 'between:0,1'],
+            'wrapRates.*.low' => ['required', 'numeric', 'min:0'],
+            'wrapRates.*.high' => ['required', 'numeric', 'min:0'],
+            'addOns.*.price' => ['required', 'numeric', 'min:0'],
+            'addOns.*.cost' => ['required', 'numeric', 'min:0'],
         ];
     }
 
@@ -119,7 +128,7 @@ class PricingSettings extends Component
 
             foreach ($this->wrapRates as $id => $row) {
                 WrapRate::whereKey($id)->update([
-                    'rate_low_cents'  => Money::toCents($row['low']),
+                    'rate_low_cents' => Money::toCents($row['low']),
                     'rate_high_cents' => Money::toCents($row['high']),
                 ]);
             }
@@ -127,7 +136,7 @@ class PricingSettings extends Component
             foreach ($this->addOns as $id => $row) {
                 AddOn::whereKey($id)->update([
                     'price_cents' => Money::toCents($row['price']),
-                    'cost_cents'  => Money::toCents($row['cost']),
+                    'cost_cents' => Money::toCents($row['cost']),
                 ]);
             }
         });

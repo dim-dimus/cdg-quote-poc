@@ -19,8 +19,8 @@ class AppServiceProvider extends ServiceProvider
         // Wire the pricing engine once. Adding a future service module means
         // registering another calculator here — nothing else in the app changes.
         $this->app->singleton(Engine::class, function () {
-            $registry = new CalculatorRegistry();
-            $registry->register(new WrapCalculator());
+            $registry = new CalculatorRegistry;
+            $registry->register(new WrapCalculator);
 
             return new Engine($registry);
         });

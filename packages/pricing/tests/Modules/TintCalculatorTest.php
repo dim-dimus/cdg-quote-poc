@@ -16,21 +16,21 @@ use CDG\Pricing\ValueObjects\PricingConfig;
 function tintDemoConfig(): PricingConfig
 {
     return new PricingConfig(
-        shopRateCents:            11000,
-        wasteMultiplier:          1.2,
+        shopRateCents: 11000,
+        wasteMultiplier: 1.2,
         materialCostCentsPerSqFt: 220,
-        complexityMultipliers:    ['easy' => 0.95, 'standard' => 1.0, 'complex' => 1.12, 'specialty' => 1.22],
-        marginFloors:             ['reject' => 0.55, 'review' => 0.60, 'strong' => 0.65],
-        addOns:                   [],
+        complexityMultipliers: ['easy' => 0.95, 'standard' => 1.0, 'complex' => 1.12, 'specialty' => 1.22],
+        marginFloors: ['reject' => 0.55, 'review' => 0.60, 'strong' => 0.65],
+        addOns: [],
     );
 }
 
 it('registers service type "tint"', function () {
-    expect((new TintCalculator())->serviceType())->toBe('tint');
+    expect((new TintCalculator)->serviceType())->toBe('tint');
 });
 
 it('prices windows × per-window price and cost', function () {
-    $result = (new TintCalculator())->calculate(new TintInput(5, 6000, 2000), tintDemoConfig());
+    $result = (new TintCalculator)->calculate(new TintInput(5, 6000, 2000), tintDemoConfig());
 
     expect($result->lines)->toHaveCount(1);
 
@@ -43,5 +43,5 @@ it('prices windows × per-window price and cost', function () {
 
 it('rejects a non-TintInput', function () {
     $notATint = new class implements CalculatorInput {};
-    (new TintCalculator())->calculate($notATint, tintDemoConfig());
+    (new TintCalculator)->calculate($notATint, tintDemoConfig());
 })->throws(InvalidArgumentException::class, 'TintCalculator expects a TintInput');

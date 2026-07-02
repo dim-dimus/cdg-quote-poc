@@ -31,40 +31,39 @@ final class QuoteService
     public function __construct(
         private readonly Engine $engine,
         private readonly PricingConfigRepository $configRepository,
-    ) {
-    }
+    ) {}
 
     /**
      * Price the request through the engine and persist a Quote snapshot.
      *
-     * @param int|null $userId The staff member creating the quote, if known.
+     * @param  int|null  $userId  The staff member creating the quote, if known.
      */
     public function create(QuoteRequest $request, ?int $userId = null): Quote
     {
-        $vehicle  = Vehicle::findOrFail($request->vehicleId);
+        $vehicle = Vehicle::findOrFail($request->vehicleId);
         $wrapRate = $this->wrapRate($request->wrapTypeKey);
-        $config   = $this->configRepository->load();
-        $input    = $this->buildInput($request, $vehicle, $wrapRate);
+        $config = $this->configRepository->load();
+        $input = $this->buildInput($request, $vehicle, $wrapRate);
 
         $result = $this->engine->run(['wrap' => $input], $config);
 
         return Quote::create([
-            'user_id'            => $userId,
-            'customer_name'      => $request->customerName,
-            'vehicle_id'         => $vehicle->id,
-            'wrap_rate_id'       => $wrapRate->id,
-            'complexity'         => $request->complexity,
-            'requested_finish'   => $request->requestedFinish,
-            'add_on_selections'  => $request->addOnSelections,
-            'total_sell_cents'   => $result->totalSellCents,
-            'total_cost_cents'   => $result->totalCostCents,
+            'user_id' => $userId,
+            'customer_name' => $request->customerName,
+            'vehicle_id' => $vehicle->id,
+            'wrap_rate_id' => $wrapRate->id,
+            'complexity' => $request->complexity,
+            'requested_finish' => $request->requestedFinish,
+            'add_on_selections' => $request->addOnSelections,
+            'total_sell_cents' => $result->totalSellCents,
+            'total_cost_cents' => $result->totalCostCents,
             'gross_profit_cents' => $result->grossProfitCents,
-            'gross_margin'       => $result->grossMargin,
-            'decision'           => $result->decision,
-            'lines'              => $this->serializeLines($result->lines),
-            'breakdown'          => $this->serializeBreakdown($result->breakdown),
-            'input_snapshot'     => $this->inputSnapshot($vehicle, $wrapRate, $input),
-            'config_snapshot'    => $this->configSnapshot($config),
+            'gross_margin' => $result->grossMargin,
+            'decision' => $result->decision,
+            'lines' => $this->serializeLines($result->lines),
+            'breakdown' => $this->serializeBreakdown($result->breakdown),
+            'input_snapshot' => $this->inputSnapshot($vehicle, $wrapRate, $input),
+            'config_snapshot' => $this->configSnapshot($config),
         ]);
     }
 
@@ -73,9 +72,9 @@ final class QuoteService
      */
     public function price(QuoteRequest $request): QuoteResult
     {
-        $vehicle  = Vehicle::findOrFail($request->vehicleId);
+        $vehicle = Vehicle::findOrFail($request->vehicleId);
         $wrapRate = $this->wrapRate($request->wrapTypeKey);
-        $input    = $this->buildInput($request, $vehicle, $wrapRate);
+        $input = $this->buildInput($request, $vehicle, $wrapRate);
 
         return $this->engine->run(['wrap' => $input], $this->configRepository->load());
     }
@@ -83,13 +82,13 @@ final class QuoteService
     private function buildInput(QuoteRequest $request, Vehicle $vehicle, WrapRate $wrapRate): WrapInput
     {
         return new WrapInput(
-            laborLowHours:   $vehicle->labor_low_hours,
-            laborHighHours:  $vehicle->labor_high_hours,
-            sqFtLow:         $vehicle->sqft_low,
-            sqFtHigh:        $vehicle->sqft_high,
-            rateLowCents:    $wrapRate->rate_low_cents,
-            rateHighCents:   $wrapRate->rate_high_cents,
-            complexity:      $request->complexity,
+            laborLowHours: $vehicle->labor_low_hours,
+            laborHighHours: $vehicle->labor_high_hours,
+            sqFtLow: $vehicle->sqft_low,
+            sqFtHigh: $vehicle->sqft_high,
+            rateLowCents: $wrapRate->rate_low_cents,
+            rateHighCents: $wrapRate->rate_high_cents,
+            complexity: $request->complexity,
             addOnSelections: $request->addOnSelections,
             requestedFinish: $request->requestedFinish,
         );
@@ -101,7 +100,7 @@ final class QuoteService
     }
 
     /**
-     * @param ServiceLine[] $lines
+     * @param  ServiceLine[]  $lines
      * @return array<int, array{serviceType: string, description: string, sellCents: int, costCents: int}>
      */
     private function serializeLines(array $lines): array
@@ -109,13 +108,13 @@ final class QuoteService
         return array_map(fn (ServiceLine $line) => [
             'serviceType' => $line->serviceType,
             'description' => $line->description,
-            'sellCents'   => $line->sellCents,
-            'costCents'   => $line->costCents,
+            'sellCents' => $line->sellCents,
+            'costCents' => $line->costCents,
         ], $lines);
     }
 
     /**
-     * @param array<string, BreakdownMetric[]> $breakdown  serviceType => metrics
+     * @param  array<string, BreakdownMetric[]>  $breakdown  serviceType => metrics
      * @return array<string, array<int, array{label: string, value: int|float, unit: string}>>
      */
     private function serializeBreakdown(array $breakdown): array
@@ -125,7 +124,7 @@ final class QuoteService
                 fn (BreakdownMetric $metric) => [
                     'label' => $metric->label,
                     'value' => $metric->value,
-                    'unit'  => $metric->unit,
+                    'unit' => $metric->unit,
                 ],
                 $metrics,
             ),
@@ -142,18 +141,18 @@ final class QuoteService
     private function inputSnapshot(Vehicle $vehicle, WrapRate $wrapRate, WrapInput $input): array
     {
         return [
-            'vehicleId'       => $vehicle->id,
-            'vehicleName'     => $vehicle->name,
+            'vehicleId' => $vehicle->id,
+            'vehicleName' => $vehicle->name,
             'vehicleCategory' => $vehicle->category,
-            'wrapTypeKey'     => $wrapRate->key,
-            'wrapTypeName'    => $wrapRate->name,
-            'laborLowHours'   => $input->laborLowHours,
-            'laborHighHours'  => $input->laborHighHours,
-            'sqFtLow'         => $input->sqFtLow,
-            'sqFtHigh'        => $input->sqFtHigh,
-            'rateLowCents'    => $input->rateLowCents,
-            'rateHighCents'   => $input->rateHighCents,
-            'complexity'      => $input->complexity,
+            'wrapTypeKey' => $wrapRate->key,
+            'wrapTypeName' => $wrapRate->name,
+            'laborLowHours' => $input->laborLowHours,
+            'laborHighHours' => $input->laborHighHours,
+            'sqFtLow' => $input->sqFtLow,
+            'sqFtHigh' => $input->sqFtHigh,
+            'rateLowCents' => $input->rateLowCents,
+            'rateHighCents' => $input->rateHighCents,
+            'complexity' => $input->complexity,
             'requestedFinish' => $input->requestedFinish,
             'addOnSelections' => $input->addOnSelections,
         ];
@@ -167,12 +166,12 @@ final class QuoteService
     private function configSnapshot(PricingConfig $config): array
     {
         return [
-            'shopRateCents'            => $config->shopRateCents,
-            'wasteMultiplier'          => $config->wasteMultiplier,
+            'shopRateCents' => $config->shopRateCents,
+            'wasteMultiplier' => $config->wasteMultiplier,
             'materialCostCentsPerSqFt' => $config->materialCostCentsPerSqFt,
-            'complexityMultipliers'    => $config->complexityMultipliers,
-            'marginFloors'             => $config->marginFloors,
-            'addOns'                   => $config->addOns,
+            'complexityMultipliers' => $config->complexityMultipliers,
+            'marginFloors' => $config->marginFloors,
+            'addOns' => $config->addOns,
         ];
     }
 }

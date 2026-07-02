@@ -16,14 +16,13 @@ namespace CDG\Pricing\ValueObjects;
 final readonly class BreakdownMetric
 {
     /**
-     * @param string    $label Human-readable row label, e.g. "Base Labor Hours".
-     * @param int|float $value Integer cents when unit is "cents"; otherwise a float.
-     * @param string    $unit  One of: "cents", "sqft", "hours".
+     * @param  string  $label  Human-readable row label, e.g. "Base Labor Hours".
+     * @param  int|float  $value  Integer cents when unit is "cents"; otherwise a float.
+     * @param  string  $unit  One of: "cents", "sqft", "hours".
      */
     public function __construct(
         public string $label,
         public int|float $value,
         public string $unit,
-    ) {
-    }
+    ) {}
 }

@@ -15,7 +15,7 @@ final class Money
     /** e.g. 855000 → "$8,550.00" */
     public static function format(int $cents): string
     {
-        return '$' . number_format($cents / 100, 2);
+        return '$'.number_format($cents / 100, 2);
     }
 
     /**

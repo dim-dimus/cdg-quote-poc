@@ -37,7 +37,7 @@ final class WrapCalculator implements Calculator
     {
         if (! $input instanceof WrapInput) {
             throw new \InvalidArgumentException(
-                'WrapCalculator expects a WrapInput, got ' . $input::class . '.'
+                'WrapCalculator expects a WrapInput, got '.$input::class.'.'
             );
         }
 
@@ -48,27 +48,27 @@ final class WrapCalculator implements Calculator
 
         // Averages (DECISIONS.md D4) — always the midpoint of the low/high pair.
         $laborHours = ($input->laborLowHours + $input->laborHighHours) / 2;
-        $sqFt       = ($input->sqFtLow + $input->sqFtHigh) / 2;
-        $rateCents  = ($input->rateLowCents + $input->rateHighCents) / 2;
+        $sqFt = ($input->sqFtLow + $input->sqFtHigh) / 2;
+        $rateCents = ($input->rateLowCents + $input->rateHighCents) / 2;
 
         // Revenue and cost components, full precision in cents.
-        $baseWrapRevCents  = $sqFt * $rateCents * $complexityMultiplier; // D5: multiplier on wrap rev only
-        $laborRevCents     = $laborHours * $config->shopRateCents;       // D1: appears in sell AND cost
-        $materialQtySqFt   = $sqFt * $config->wasteMultiplier;           // D2: waste multiplier
+        $baseWrapRevCents = $sqFt * $rateCents * $complexityMultiplier; // D5: multiplier on wrap rev only
+        $laborRevCents = $laborHours * $config->shopRateCents;       // D1: appears in sell AND cost
+        $materialQtySqFt = $sqFt * $config->wasteMultiplier;           // D2: waste multiplier
         $materialCostCents = $materialQtySqFt * $config->materialCostCentsPerSqFt;
 
         $lines = [
             new ServiceLine(
                 serviceType: 'wrap',
                 description: 'Vehicle wrap',
-                sellCents:   Rounding::toCents($baseWrapRevCents),
-                costCents:   Rounding::toCents($materialCostCents),
+                sellCents: Rounding::toCents($baseWrapRevCents),
+                costCents: Rounding::toCents($materialCostCents),
             ),
             new ServiceLine(
                 serviceType: 'wrap',
                 description: 'Installation labor',
-                sellCents:   Rounding::toCents($laborRevCents),
-                costCents:   Rounding::toCents($laborRevCents),
+                sellCents: Rounding::toCents($laborRevCents),
+                costCents: Rounding::toCents($laborRevCents),
             ),
         ];
 
@@ -85,9 +85,9 @@ final class WrapCalculator implements Calculator
 
             $lines[] = new ServiceLine(
                 serviceType: 'wrap',
-                description: 'Add-on: ' . ($addOn['name'] ?? $key),
-                sellCents:   $sellCents,
-                costCents:   $addOn['costCents'],
+                description: 'Add-on: '.($addOn['name'] ?? $key),
+                sellCents: $sellCents,
+                costCents: $addOn['costCents'],
             );
         }
 

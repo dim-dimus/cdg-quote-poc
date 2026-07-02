@@ -28,13 +28,18 @@ class QuoteBuilder extends Component
 {
     // Vehicle combobox
     public ?int $vehicleId = null;
+
     public string $vehicleName = '';
+
     public string $vehicleSearch = '';
 
     // Selections
     public string $wrapTypeKey = 'color_change';
+
     public string $complexity = 'standard';
+
     public ?string $requestedFinish = null;
+
     public ?string $customerName = null;
 
     /** @var array<string, bool> add-on key => toggled on */
@@ -75,7 +80,7 @@ class QuoteBuilder extends Component
             return collect();
         }
 
-        return Vehicle::whereRaw('LOWER(name) LIKE ?', ['%' . strtolower($query) . '%'])
+        return Vehicle::whereRaw('LOWER(name) LIKE ?', ['%'.strtolower($query).'%'])
             ->orderBy('category')
             ->orderBy('name')
             ->limit(30)
@@ -100,9 +105,9 @@ class QuoteBuilder extends Component
     public function complexityOptions(): array
     {
         return [
-            'easy'      => 'Easy',
-            'standard'  => 'Standard',
-            'complex'   => 'Complex',
+            'easy' => 'Easy',
+            'standard' => 'Standard',
+            'complex' => 'Complex',
             'specialty' => 'Specialty',
         ];
     }
@@ -127,12 +132,12 @@ class QuoteBuilder extends Component
     public function save(): void
     {
         $this->validate([
-            'vehicleId'        => 'required|integer',
-            'wrapTypeKey'      => 'required|string',
-            'complexity'       => 'required|string',
-            'addonOverride.*'  => 'nullable|numeric|min:0',
-            'customerName'     => 'nullable|string|max:255',
-            'requestedFinish'  => 'nullable|string|max:255',
+            'vehicleId' => 'required|integer',
+            'wrapTypeKey' => 'required|string',
+            'complexity' => 'required|string',
+            'addonOverride.*' => 'nullable|numeric|min:0',
+            'customerName' => 'nullable|string|max:255',
+            'requestedFinish' => 'nullable|string|max:255',
         ], [], ['vehicleId' => 'vehicle']);
 
         $request = $this->buildRequest();
@@ -165,12 +170,12 @@ class QuoteBuilder extends Component
         }
 
         return new QuoteRequest(
-            vehicleId:       $this->vehicleId,
-            wrapTypeKey:     $this->wrapTypeKey,
-            complexity:      $this->complexity,
+            vehicleId: $this->vehicleId,
+            wrapTypeKey: $this->wrapTypeKey,
+            complexity: $this->complexity,
             addOnSelections: $selections,
             requestedFinish: $this->requestedFinish ?: null,
-            customerName:    $this->customerName ?: null,
+            customerName: $this->customerName ?: null,
         );
     }
 

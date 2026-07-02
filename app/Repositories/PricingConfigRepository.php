@@ -26,13 +26,13 @@ final class PricingConfigRepository
         $settings = ShopSetting::query()->pluck('value', 'key');
 
         return new PricingConfig(
-            shopRateCents:            (int) round($settings['shop_rate_cents']),
-            wasteMultiplier:          (float) $settings['waste_multiplier'],
+            shopRateCents: (int) round($settings['shop_rate_cents']),
+            wasteMultiplier: (float) $settings['waste_multiplier'],
             materialCostCentsPerSqFt: (int) round($settings['material_cost_cents_per_sqft']),
             complexityMultipliers: [
-                'easy'      => (float) $settings['complexity_multiplier_easy'],
-                'standard'  => (float) $settings['complexity_multiplier_standard'],
-                'complex'   => (float) $settings['complexity_multiplier_complex'],
+                'easy' => (float) $settings['complexity_multiplier_easy'],
+                'standard' => (float) $settings['complexity_multiplier_standard'],
+                'complex' => (float) $settings['complexity_multiplier_complex'],
                 'specialty' => (float) $settings['complexity_multiplier_specialty'],
             ],
             marginFloors: [
@@ -53,9 +53,9 @@ final class PricingConfigRepository
             ->get()
             ->mapWithKeys(fn (AddOn $addOn) => [
                 $addOn->key => [
-                    'name'       => $addOn->name,
+                    'name' => $addOn->name,
                     'priceCents' => $addOn->price_cents,
-                    'costCents'  => $addOn->cost_cents,
+                    'costCents' => $addOn->cost_cents,
                 ],
             ])
             ->all();

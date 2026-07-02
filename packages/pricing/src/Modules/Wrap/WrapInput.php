@@ -18,13 +18,13 @@ use CDG\Pricing\Contracts\CalculatorInput;
 final readonly class WrapInput implements CalculatorInput
 {
     /**
-     * @param array<string, int|null> $addOnSelections
-     *        Key = add-on identifier; value = override sell price in cents, or
-     *        null to use the config catalog default. Add-on cost always comes
-     *        from config (not overridable). See DECISIONS.md D7.
-     * @param string|null $requestedFinish
-     *        Informational only — no price effect today. Stored on the quote
-     *        so finish-based pricing can be added later. See DECISIONS.md D9.
+     * @param  array<string, int|null>  $addOnSelections
+     *                                                    Key = add-on identifier; value = override sell price in cents, or
+     *                                                    null to use the config catalog default. Add-on cost always comes
+     *                                                    from config (not overridable). See DECISIONS.md D7.
+     * @param  string|null  $requestedFinish
+     *                                        Informational only — no price effect today. Stored on the quote
+     *                                        so finish-based pricing can be added later. See DECISIONS.md D9.
      */
     public function __construct(
         public float $laborLowHours,
@@ -36,6 +36,5 @@ final readonly class WrapInput implements CalculatorInput
         public string $complexity,
         public array $addOnSelections,
         public ?string $requestedFinish = null,
-    ) {
-    }
+    ) {}
 }

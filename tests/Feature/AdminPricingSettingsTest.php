@@ -6,9 +6,9 @@ use App\Livewire\Admin\PricingSettings;
 use App\Models\AddOn;
 use App\Models\ShopSetting;
 use App\Models\User;
+use App\Models\Vehicle;
 use App\Services\QuoteRequest;
 use App\Services\QuoteService;
-use App\Models\Vehicle;
 use Database\Seeders\WorkbookSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
@@ -18,7 +18,6 @@ use Livewire\Livewire;
  * no deploy. These drive the Livewire admin screen and re-price through the
  * engine to prove the config round-trip.
  */
-
 uses(RefreshDatabase::class);
 
 beforeEach(function () {
@@ -32,9 +31,9 @@ function priceTransit(): int
     $vehicleId = Vehicle::where('name', 'Ford Transit')->value('id');
 
     return app(QuoteService::class)->price(new QuoteRequest(
-        vehicleId:   $vehicleId,
+        vehicleId: $vehicleId,
         wrapTypeKey: 'color_change',
-        complexity:  'standard',
+        complexity: 'standard',
     ))->totalSellCents;
 }
 

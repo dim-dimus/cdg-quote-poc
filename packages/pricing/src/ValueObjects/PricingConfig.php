@@ -15,16 +15,16 @@ namespace CDG\Pricing\ValueObjects;
 final readonly class PricingConfig
 {
     /**
-     * @param int   $shopRateCents              Shop labor rate in cents per hour (e.g. 11000 = $110/hr).
-     * @param float $wasteMultiplier             Material order multiplier applied to surface area (e.g. 1.2).
-     * @param int   $materialCostCentsPerSqFt    Material cost in cents per sq ft (e.g. 350 = $3.50).
-     * @param array{easy: float, standard: float, complex: float, specialty: float} $complexityMultipliers
-     * @param array{reject: float, review: float, strong: float} $marginFloors
-     *        Margin thresholds: below reject → REJECT/REPRICE; below review → REVIEW;
-     *        below strong → GOOD; otherwise → STRONG.
-     * @param array<string, array{name?: string, priceCents: int, costCents: int}> $addOns
-     *        Add-on catalog keyed by add-on identifier. Optional display "name"
-     *        is used for the line description; falls back to the key if absent.
+     * @param  int  $shopRateCents  Shop labor rate in cents per hour (e.g. 11000 = $110/hr).
+     * @param  float  $wasteMultiplier  Material order multiplier applied to surface area (e.g. 1.2).
+     * @param  int  $materialCostCentsPerSqFt  Material cost in cents per sq ft (e.g. 350 = $3.50).
+     * @param  array{easy: float, standard: float, complex: float, specialty: float}  $complexityMultipliers
+     * @param  array{reject: float, review: float, strong: float}  $marginFloors
+     *                                                                            Margin thresholds: below reject → REJECT/REPRICE; below review → REVIEW;
+     *                                                                            below strong → GOOD; otherwise → STRONG.
+     * @param  array<string, array{name?: string, priceCents: int, costCents: int}>  $addOns
+     *                                                                                        Add-on catalog keyed by add-on identifier. Optional display "name"
+     *                                                                                        is used for the line description; falls back to the key if absent.
      */
     public function __construct(
         public int $shopRateCents,
@@ -33,6 +33,5 @@ final readonly class PricingConfig
         public array $complexityMultipliers,
         public array $marginFloors,
         public array $addOns,
-    ) {
-    }
+    ) {}
 }

@@ -33,6 +33,26 @@ jobs:
         working-directory: packages/pricing
         run: ./vendor/bin/pest
 
+  # Code style: Laravel Pint over the whole tree (app + engine), non-mutating.
+  lint:
+    name: Pint (code style)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:v2
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Check code style
+        run: ./vendor/bin/pint --test
+
   # The engine must have zero framework dependencies — the same grep the
   # /parity-check gate runs locally.
   engine-isolation:

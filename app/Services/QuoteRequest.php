@@ -12,8 +12,8 @@ namespace App\Services;
 final readonly class QuoteRequest
 {
     /**
-     * @param array<string, int|null> $addOnSelections
-     *        Add-on key => override sell price in cents, or null for catalog price (D7).
+     * @param  array<string, int|null>  $addOnSelections
+     *                                                    Add-on key => override sell price in cents, or null for catalog price (D7).
      */
     public function __construct(
         public int $vehicleId,
@@ -22,6 +22,5 @@ final readonly class QuoteRequest
         public array $addOnSelections = [],
         public ?string $requestedFinish = null,
         public ?string $customerName = null,
-    ) {
-    }
+    ) {}
 }

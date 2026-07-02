@@ -24,6 +24,5 @@ final readonly class TintInput implements CalculatorInput
         public int $windowCount,
         public int $pricePerWindowCents,
         public int $costPerWindowCents,
-    ) {
-    }
+    ) {}
 }

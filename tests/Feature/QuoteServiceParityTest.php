@@ -18,7 +18,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
  * tested against, and cross-checks that the seeded workbook data matches the
  * fixture inputs.
  */
-
 uses(RefreshDatabase::class);
 
 beforeEach(function () {
@@ -26,7 +25,7 @@ beforeEach(function () {
 });
 
 $fixture = json_decode(
-    file_get_contents(dirname(__DIR__, 2) . '/packages/pricing/tests/Fixtures/wrap-cases.json'),
+    file_get_contents(dirname(__DIR__, 2).'/packages/pricing/tests/Fixtures/wrap-cases.json'),
     associative: true,
 );
 
@@ -55,9 +54,9 @@ it('reproduces the workbook fixture through QuoteService', function (array $case
         ->and($vehicle->sqft_high)->toBe($input['sqFtHigh'], "{$case['id']}: sqft high");
 
     $quote = app(QuoteService::class)->create(new QuoteRequest(
-        vehicleId:       $vehicle->id,
-        wrapTypeKey:     $wrapRate->key,
-        complexity:      $input['complexity'],
+        vehicleId: $vehicle->id,
+        wrapTypeKey: $wrapRate->key,
+        complexity: $input['complexity'],
         addOnSelections: $input['addOnSelections'],
         requestedFinish: $input['requestedFinish'],
     ));

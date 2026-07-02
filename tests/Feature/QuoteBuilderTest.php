@@ -14,7 +14,6 @@ use Livewire\Livewire;
  * Phase 5 exit: the Front Desk UI shows numbers equal to the workbook, live.
  * These drive the full chain UI → QuoteService → Engine → workbook fixtures.
  */
-
 uses(RefreshDatabase::class);
 
 beforeEach(function () {

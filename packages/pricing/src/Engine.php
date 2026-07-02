@@ -18,14 +18,12 @@ use CDG\Pricing\ValueObjects\QuoteResult;
  */
 final class Engine
 {
-    public function __construct(private readonly CalculatorRegistry $registry)
-    {
-    }
+    public function __construct(private readonly CalculatorRegistry $registry) {}
 
     /**
      * Run the given calculators and return a fully priced QuoteResult.
      *
-     * @param array<string, CalculatorInput> $inputs  serviceType → input
+     * @param  array<string, CalculatorInput>  $inputs  serviceType → input
      */
     public function run(array $inputs, PricingConfig $config): QuoteResult
     {

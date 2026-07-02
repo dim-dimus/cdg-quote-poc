@@ -13,7 +13,6 @@ use Illuminate\Foundation\Testing\RefreshDatabase;
  * Sanity checks on the workbook data load: counts and a couple of spot values.
  * Guards against a corrupted vehicles.json or a mis-transcribed config value.
  */
-
 uses(RefreshDatabase::class);
 
 beforeEach(function () {

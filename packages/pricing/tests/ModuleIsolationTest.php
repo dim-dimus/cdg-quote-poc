@@ -20,24 +20,23 @@ use CDG\Pricing\Modules\Wrap\WrapInput;
  *   2. "existing calculations can't be affected" — the wrap output is identical
  *      whether or not tint is registered alongside it.
  */
-
 function isolationWrapInput(): WrapInput
 {
     return new WrapInput(
-        laborLowHours:  22,
+        laborLowHours: 22,
         laborHighHours: 28,
-        sqFtLow:        280,
-        sqFtHigh:       300,
-        rateLowCents:   1600,
-        rateHighCents:  2400,
-        complexity:     'standard',
+        sqFtLow: 280,
+        sqFtHigh: 300,
+        rateLowCents: 1600,
+        rateHighCents: 2400,
+        complexity: 'standard',
         addOnSelections: [],
     );
 }
 
 it('prices a brand-new module through the same engine', function () {
-    $registry = new CalculatorRegistry();
-    $registry->register(new TintCalculator());   // a module Engine has never heard of
+    $registry = new CalculatorRegistry;
+    $registry->register(new TintCalculator);   // a module Engine has never heard of
     $engine = new Engine($registry);
 
     $result = $engine->run(['tint' => new TintInput(6, 5000, 1500)], tintDemoConfig());
@@ -52,14 +51,14 @@ it('leaves existing wrap output identical when a new module is registered alongs
     $config = tintDemoConfig();
 
     // Wrap alone.
-    $wrapOnlyRegistry = new CalculatorRegistry();
-    $wrapOnlyRegistry->register(new WrapCalculator());
+    $wrapOnlyRegistry = new CalculatorRegistry;
+    $wrapOnlyRegistry->register(new WrapCalculator);
     $wrapOnly = (new Engine($wrapOnlyRegistry))->run(['wrap' => isolationWrapInput()], $config);
 
     // Wrap + Tint. Tint registered FIRST to show ordering is irrelevant.
-    $bothRegistry = new CalculatorRegistry();
-    $bothRegistry->register(new TintCalculator());
-    $bothRegistry->register(new WrapCalculator());
+    $bothRegistry = new CalculatorRegistry;
+    $bothRegistry->register(new TintCalculator);
+    $bothRegistry->register(new WrapCalculator);
     $both = (new Engine($bothRegistry))->run([
         'wrap' => isolationWrapInput(),
         'tint' => new TintInput(6, 5000, 1500),

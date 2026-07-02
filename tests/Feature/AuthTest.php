@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use App\Livewire\Auth\Login;
+use App\Livewire\FrontDesk\QuoteBuilder;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
@@ -11,7 +12,6 @@ use Livewire\Livewire;
 /**
  * The Front Desk is gated behind login. These cover the guard and the login flow.
  */
-
 uses(RefreshDatabase::class);
 
 it('redirects guests from the front desk to login', function () {
@@ -24,7 +24,7 @@ it('lets an authenticated user reach the front desk', function () {
     $this->actingAs(User::factory()->create())
         ->get('/')
         ->assertOk()
-        ->assertSeeLivewire(App\Livewire\FrontDesk\QuoteBuilder::class);
+        ->assertSeeLivewire(QuoteBuilder::class);
 });
 
 it('signs a user in with valid credentials', function () {

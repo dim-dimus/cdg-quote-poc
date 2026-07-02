@@ -15,38 +15,37 @@ use CDG\Pricing\ValueObjects\ServiceLine;
  * These test individual formula steps and edge cases; the full workbook
  * parity lives in ExcelParityTest.
  */
-
-$calculator = new WrapCalculator();
+$calculator = new WrapCalculator;
 
 /** Baseline config matching the fixture Shop Settings. */
 function wrapTestConfig(): PricingConfig
 {
     return new PricingConfig(
-        shopRateCents:            11000,
-        wasteMultiplier:          1.2,
+        shopRateCents: 11000,
+        wasteMultiplier: 1.2,
         materialCostCentsPerSqFt: 220,
-        complexityMultipliers:    ['easy' => 0.95, 'standard' => 1.0, 'complex' => 1.12, 'specialty' => 1.22],
-        marginFloors:             ['reject' => 0.55, 'review' => 0.60, 'strong' => 0.65],
-        addOns:                   [
+        complexityMultipliers: ['easy' => 0.95, 'standard' => 1.0, 'complex' => 1.12, 'specialty' => 1.22],
+        marginFloors: ['reject' => 0.55, 'review' => 0.60, 'strong' => 0.65],
+        addOns: [
             'ceramic_coating' => ['priceCents' => 70000, 'costCents' => 10000],
-            'window_tint'     => ['priceCents' => 40000, 'costCents' => 12000],
+            'window_tint' => ['priceCents' => 40000, 'costCents' => 12000],
         ],
     );
 }
 
 /**
- * @param array<string, int|null> $addOnSelections
+ * @param  array<string, int|null>  $addOnSelections
  */
 function wrapTestInput(string $complexity = 'standard', array $addOnSelections = []): WrapInput
 {
     return new WrapInput(
-        laborLowHours:  22,
+        laborLowHours: 22,
         laborHighHours: 28,
-        sqFtLow:        280,
-        sqFtHigh:       300,
-        rateLowCents:   1600,
-        rateHighCents:  2400,
-        complexity:     $complexity,
+        sqFtLow: 280,
+        sqFtHigh: 300,
+        rateLowCents: 1600,
+        rateHighCents: 2400,
+        complexity: $complexity,
         addOnSelections: $addOnSelections,
     );
 }
@@ -93,12 +92,12 @@ it('uses the catalog add-on price when no override is given (D7)', function () u
 
 it('labels the add-on line with its display name when the catalog provides one', function () use ($calculator) {
     $config = new PricingConfig(
-        shopRateCents:            11000,
-        wasteMultiplier:          1.2,
+        shopRateCents: 11000,
+        wasteMultiplier: 1.2,
         materialCostCentsPerSqFt: 220,
-        complexityMultipliers:    ['easy' => 0.95, 'standard' => 1.0, 'complex' => 1.12, 'specialty' => 1.22],
-        marginFloors:             ['reject' => 0.55, 'review' => 0.60, 'strong' => 0.65],
-        addOns:                   ['window_tint' => ['name' => 'Window Tint', 'priceCents' => 40000, 'costCents' => 12000]],
+        complexityMultipliers: ['easy' => 0.95, 'standard' => 1.0, 'complex' => 1.12, 'specialty' => 1.22],
+        marginFloors: ['reject' => 0.55, 'review' => 0.60, 'strong' => 0.65],
+        addOns: ['window_tint' => ['name' => 'Window Tint', 'priceCents' => 40000, 'costCents' => 12000]],
     );
 
     $lines = $calculator->calculate(wrapTestInput('standard', ['window_tint' => null]), $config)->lines;
