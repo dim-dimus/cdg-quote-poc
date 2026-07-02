@@ -44,7 +44,8 @@ it('changes the next quote when the shop rate is edited (exit criterion)', funct
     Livewire::test(PricingSettings::class)
         ->set('shopRate', '150.00')   // was $110/hr
         ->call('save')
-        ->assertHasNoErrors();
+        ->assertHasNoErrors()
+        ->assertDispatched('scroll-to-top');   // banner brought into view
 
     expect(ShopSetting::where('key', 'shop_rate_cents')->value('value'))->toEqual(15000)
         ->and(priceTransit())->not->toBe($before);   // next quote reflects it
@@ -70,7 +71,8 @@ it('rejects margin floors that are not ascending', function () {
         ->set('marginReview', '0.60')   // below reject → invalid
         ->set('marginStrong', '0.80')
         ->call('save')
-        ->assertHasErrors('marginReview');
+        ->assertHasErrors('marginReview')
+        ->assertNotDispatched('scroll-to-top');   // no scroll on a failed save
 
     // Unchanged in the DB.
     expect(ShopSetting::where('key', 'margin_floor_reject')->value('value'))->toEqual(0.55);

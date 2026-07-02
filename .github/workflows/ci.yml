@@ -5,37 +5,74 @@ on:
   pull_request:
 
 jobs:
-  engine-tests:
-    name: Engine tests
+  # The pricing engine on both ends of its supported range.
+  #   8.3 = the engine's declared minimum (its compatibility contract).
+  #   8.4 = the version the app actually runs the engine under.
+  engine:
+    name: Engine tests (PHP ${{ matrix.php-version }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php-version: ['8.3', '8.4']
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: ${{ matrix.php-version }}
+          tools: composer:v2
           coverage: none
 
       - name: Install engine dependencies
         working-directory: packages/pricing
-        run: composer install --no-interaction --prefer-dist
+        run: composer install --no-interaction --prefer-dist --no-progress
 
       - name: Run engine Pest suite
         working-directory: packages/pricing
         run: ./vendor/bin/pest
 
+  # The engine must have zero framework dependencies — the same grep the
+  # /parity-check gate runs locally.
   engine-isolation:
     name: Engine isolation guard
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4.2.2
 
       - name: Fail if forbidden framework symbols found in engine
         run: |
-          if grep -rE \
-            'Illuminate\\|Eloquent|Livewire|request\(|response\(|app\(|config\(|env\(|DB::|Cache::|Storage::|auth\(' \
-            packages/pricing/src; then
+          PATTERN='Illuminate\\|Eloquent|Livewire|request\(|response\(|app\(|config\(|env\(|DB::|Cache::|Storage::|auth\('
+          if grep -rE "$PATTERN" packages/pricing/src; then
             echo "::error::Forbidden framework symbol detected in packages/pricing/src"
             exit 1
           fi
+          echo "OK: engine is framework-free."
+
+  # The full Laravel app suite (Feature + Unit) from a clean checkout, on the
+  # PHP version the app targets. DB is sqlite :memory: (see phpunit.xml).
+  app:
+    name: App tests (PHP 8.4)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, dom, pdo_sqlite, sqlite3, bcmath
+          tools: composer:v2
+          coverage: none
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Prepare environment
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - name: Run app Pest suite
+        run: ./vendor/bin/pest

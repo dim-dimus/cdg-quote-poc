@@ -1,4 +1,6 @@
-<div class="mx-auto max-w-3xl">
+<div class="mx-auto max-w-3xl"
+     x-data
+     x-on:scroll-to-top.window="window.scrollTo({ top: 0, behavior: 'smooth' })">
     <div class="mb-6 flex items-center justify-between">
         <h1 class="text-lg font-semibold">Pricing settings</h1>
         <a href="{{ route('front-desk') }}" class="text-sm text-slate-500 hover:text-slate-900">← Front Desk</a>
@@ -9,6 +11,12 @@
     @endif
 
     <form wire:submit="save" class="space-y-6">
+        <div class="flex justify-end">
+            <button type="submit" class="rounded bg-slate-900 px-4 py-2 font-medium text-white hover:bg-slate-800">
+                Save settings
+            </button>
+        </div>
+
         {{-- Shop settings --}}
         <section class="rounded-lg border border-slate-200 bg-white p-5">
             <h2 class="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">Shop settings</h2>

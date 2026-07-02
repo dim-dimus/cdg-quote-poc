@@ -133,6 +133,9 @@ class PricingSettings extends Component
         });
 
         session()->flash('saved', 'Pricing settings saved. New quotes use these values immediately.');
+
+        // Bring the success banner (top of the page) into view after saving.
+        $this->dispatch('scroll-to-top');
     }
 
     private function putSetting(string $key, int|float $value): void
